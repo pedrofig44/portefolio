@@ -1,0 +1,138 @@
+{% extends 'includes/base.html' %}
+
+{% block content %}
+{% csrf_token %}
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card rounded-3 border-0">
+          <div class="card-body p-4">
+            <h4 class="text-center my-3 pb-3">Project Task Manager</h4>
+            
+            <!-- Date Filter and Add Task Button -->
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <form method="get" class="d-flex align-items-center">
+                  <input 
+                    type="date" 
+                    name="selected_date" 
+                    class="form-control me-2" 
+                    value="{{ selected_date }}"
+                    onchange="this.form.submit()"
+                  >
+                </form>
+              </div>
+              <div class="col-md-6 text-md-end">
+                <a href="{% url 'task:task_create' %}" class="btn btn-primary">
+                  <i class="fas fa-plus me-2"></i>Add New Task
+                </a>
+              </div>
+            </div>
+
+            <!-- Task List -->
+            <table class="table mb-4">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Project</th>
+                  <th scope="col">Activity</th>
+                  <th scope="col">Hours</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for task in tasks %}
+                <tr>
+                  <td>{{ task.date|date:"Y-m-d" }}</td>
+                  <td>{{ task.project }} ({{ task.project_code }})</td>
+                  <td>{{ task.activity|truncatechars:50 }}</td>
+                  <td>{{ task.estimated_hours }}</td>
+                  <td>
+                    <span class="badge {% if task.status == 'DONE' %}bg-success{% elif task.status == 'IN_PROGRESS' %}bg-warning{% else %}bg-secondary{% endif %}">
+                      {{ task.get_status_display }}
+                    </span>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group">
+                      <a href="{% url 'task:task_update' task.pk %}" class="btn btn-sm btn-primary me-2" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </a>
+                      <button class="btn btn-sm btn-success me-2 status-btn" data-url="{% url 'task:update_status' task.pk %}" data-status="DONE" title="Mark as Done">
+                        <i class="fas fa-check"></i>
+                      </button>
+                      <a href="{% url 'task:task_delete' task.pk %}" class="btn btn-sm btn-danger" title="Delete">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                {% empty %}
+                <tr>
+                  <td colspan="6" class="text-center">No tasks available for selected date</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const statusButtons = document.querySelectorAll('.status-btn');
+    statusButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = this.dataset.url;
+            const status = this.dataset.status;
+            const csrftoken = getCookie('csrftoken');
+            
+            const formData = new FormData();
+            formData.append('status', status);
+            formData.append('csrfmiddlewaretoken', csrftoken); // Add CSRF token to form data
+            
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    window.location.reload();
+                } else {
+                    console.error('Status update failed');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    });
+  
+
+    // CSRF token helper function
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>
+{% endblock %}
