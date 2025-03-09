@@ -1,0 +1,121 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Success Message Start -->
+<div class="container-xxl py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="mb-5">
+                    <i class="fas fa-check-circle text-primary fa-5x mb-4"></i>
+                    <h1 class="display-5 mb-4">Solicitação de Orçamento Enviada!</h1>
+                    <p class="fs-5 mb-5">Recebemos a sua solicitação de orçamento. A nossa equipa técnica irá analisar as informações fornecidas e preparar uma proposta personalizada para o seu projeto.</p>
+                    
+                    <div class="bg-light rounded p-4 mb-5">
+                        <h4 class="mb-3">O que acontece a seguir?</h4>
+                        <div class="row g-4">
+                            <div class="col-md-6 text-start">
+                                <div class="d-flex mb-3">
+                                    <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                        <span class="fw-bold">1</span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h5>Confirmação</h5>
+                                        <p class="mb-0">Receberá um email de confirmação nos próximos minutos.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-3">
+                                    <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                        <span class="fw-bold">2</span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h5>Análise Técnica</h5>
+                                        <p class="mb-0">Nossa equipa analisará os requisitos e escopo do projeto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 text-start">
+                                <div class="d-flex mb-3">
+                                    <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                        <span class="fw-bold">3</span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h5>Contacto para Detalhes</h5>
+                                        <p class="mb-0">Se necessário, entraremos em contacto para esclarecer detalhes.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                        <span class="fw-bold">4</span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h5>Envio da Proposta</h5>
+                                        <p class="mb-0">Enviaremos o orçamento detalhado em até 5 dias úteis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <a href="{% url 'home' %}" class="btn btn-outline-primary py-3 px-5 w-100">
+                                <i class="fas fa-home me-2"></i>Voltar para a Página Inicial
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{% url 'meeting_request' %}" class="btn btn-primary py-3 px-5 w-100">
+                                <i class="fas fa-calendar-alt me-2"></i>Agendar uma Reunião
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <h5 class="mb-3">Conheça casos de sucesso semelhantes ao seu projeto</h5>
+                        <div class="row g-4 mt-3">
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fas fa-industry text-primary fa-2x mb-3"></i>
+                                    <h5>Indústria 4.0</h5>
+                                    <p class="mb-0">Monitorização e automação industrial com análise preditiva</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fas fa-building text-primary fa-2x mb-3"></i>
+                                    <h5>Smart Buildings</h5>
+                                    <p class="mb-0">Gestão inteligente de edifícios e sistemas de segurança</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fas fa-tractor text-primary fa-2x mb-3"></i>
+                                    <h5>Agricultura</h5>
+                                    <p class="mb-0">Soluções de monitorização e irrigação de precisão</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Success Message End -->
+
+<style>
+    .btn-square {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+{% endblock %}

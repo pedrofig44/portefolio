@@ -1,4 +1,3 @@
-
 {% extends 'includes/base.html' %}
 
 {% block content %}
@@ -11,10 +10,10 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
                 <h1 class="display-4 mb-3 animated slideInDown">Soluções Inteligentes para a Era Digital</h1>
-                <p class="animated slideInDown mb-4">Especialista em Sensores e Inteligência Artificial, oferecendo soluções tecnológicas inovadoras para a sua empresa. Através de sensores avançados, automação inteligente e análise de dados em tempo real, transformamos o seu negócio de forma a tomar decisões mais eficiente e a gerir melhor os seus recursos.</p>
+                <p class="animated slideInDown mb-4">Especialistas em Sensores e Inteligência Artificial, oferecendo soluções tecnológicas inovadoras para a sua empresa. Através de sensores avançados, automação inteligente e análise de dados em tempo real, transformamos o seu negócio para tomar decisões mais eficientes e gerir melhor os seus recursos.</p>
                 <div class="d-flex gap-3 animated slideInDown">
-                    <a href="contacto.html" class="btn btn-primary py-3 px-4">Solicitar Consultoria</a>
-                    <a href="casos-uso.html" class="btn btn-outline-primary py-3 px-4">Ver Casos de Uso</a>
+                    <a href="{% url 'contact' %}" class="btn btn-primary py-3 px-4">Solicitar Consultoria</a>
+                    <a href="#casos-uso" class="btn btn-outline-primary py-3 px-4">Ver Casos de Uso</a>
                 </div>
             </div>
             <div class="col-lg-6 animated fadeIn">
@@ -25,24 +24,72 @@
 </div>
 <!-- Header End -->
 
+<!-- Services Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h2 class="display-6 mb-3">Os Nossos Serviços</h2>
+            <p class="text-primary fs-5 mb-5">Soluções Tecnológicas Personalizadas</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded h-100 p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="btn-square rounded-circle bg-light text-primary me-3">
+                            <i class="fas fa-microchip fa-2x"></i>
+                        </div>
+                        <h5 class="mb-0">Implementação de Sensores</h5>
+                    </div>
+                    <p class="mb-4">Instalação e configuração de redes de sensores inteligentes para monitorização em tempo real de diversos parâmetros críticos para o seu negócio.</p>
+                    <a class="btn btn-outline-primary px-3" href="">Saber Mais</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded h-100 p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="btn-square rounded-circle bg-light text-primary me-3">
+                            <i class="fas fa-brain fa-2x"></i>
+                        </div>
+                        <h5 class="mb-0">Inteligência Artificial</h5>
+                    </div>
+                    <p class="mb-4">Soluções de IA adaptadas às necessidades da sua empresa, desde análise preditiva até sistemas avançados de apoio à decisão.</p>
+                    <a class="btn btn-outline-primary px-3" href="">Saber Mais</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded h-100 p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="btn-square rounded-circle bg-light text-primary me-3">
+                            <i class="fas fa-robot fa-2x"></i>
+                        </div>
+                        <h5 class="mb-0">Automação de Processos</h5>
+                    </div>
+                    <p class="mb-4">Automatizamos processos empresariais com tecnologia de ponta, reduzindo custos e aumentando a eficiência operacional.</p>
+                    <a class="btn btn-outline-primary px-3" href="">Saber Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
 
 <!-- About Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5 bg-light">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid rounded" src="{% static 'img/about_us.png' %}" alt="Consultoria em IoT e Tecnologia">
+                <img class="img-fluid rounded shadow" src="{% static 'img/about_us.png' %}" alt="Consultoria em IoT e Tecnologia">
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
-                    <h1 class="display-6 mb-3">Sobre Nós</h1>
+                    <h2 class="display-6 mb-3">Sobre Nós</h2>
                     <p class="text-primary fs-5 mb-4">Especialistas em Soluções IoT e Tecnologia Inteligente</p>
-                    <p>Oferecemos consultoria especializada em soluções de software com sensores e Inteligência Artificial. A nossa missão é usar os dados da maneira mais eficiente possível para acrescentarmos valor a aquilo que já temos.</p>
-                    <p class="mb-4">Combinamos conhecimento técnico avançado com uma abordagem prática para entregar soluções personalizadas que impulsionam a eficiência operacional e a inovação em sua empresa.</p>
+                    <p>Oferecemos consultoria especializada em soluções de software com sensores e Inteligência Artificial. A nossa missão é utilizar os dados da maneira mais eficiente possível para acrescentarmos valor àquilo que já tem.</p>
+                    <p class="mb-4">Combinamos conhecimento técnico avançado com uma abordagem prática para entregar soluções personalizadas que impulsionam a eficiência operacional e a inovação na sua empresa.</p>
                     
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-check-circle text-primary me-3 fs-4"></i>
-                        <span>Implementação dos sensores e sistemas personalizados</span>
+                        <span>Implementação de sensores e sistemas personalizados</span>
                     </div>
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-check-circle text-primary me-3 fs-4"></i>
@@ -54,12 +101,12 @@
                     </div>
                     <div class="d-flex align-items-center mb-4">
                         <i class="fas fa-check-circle text-primary me-3 fs-4"></i>
-                        <span>Automação de Processos</span>
+                        <span>Automação de Processos Empresariais</span>
                     </div>
 
                     <div class="d-flex gap-3">
-                        <a class="btn btn-primary py-3 px-4" href="sobre.html">Saiba Mais</a>
-                        <a class="btn btn-outline-primary py-3 px-4" href="contacto.html">Fale Connosco</a>
+                        <a class="btn btn-primary py-3 px-4" href="{% url 'about' %}">Saiba Mais</a>
+                        <a class="btn btn-outline-primary py-3 px-4" href="{% url 'contact' %}">Fale Connosco</a>
                     </div>
                 </div>
             </div>
@@ -69,36 +116,119 @@
 <!-- About End -->
 
 
-<!-- Facts Start 
-<div class="container-xxl bg-light py-5 my-5">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.1s">
-                <img class="img-fluid mb-4" src="img/icon-9.png" alt="">
-                <h1 class="display-4" data-toggle="counter-up">123456</h1>
-                <p class="fs-5 text-primary mb-0">Today Transactions</p>
+<!-- Contact Form Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <h2 class="display-6 mb-4">Contacte-nos</h2>
+                <p class="mb-4">Tem uma questão ou está interessado nos nossos serviços? Preencha o formulário abaixo e entraremos em contacto consigo brevemente.</p>
+                
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px; border-radius: 10px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1">Telefone</h5>
+                        <p class="mb-0">+351 912 345 678</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px; border-radius: 10px;">
+                        <i class="fa fa-envelope-open text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1">Email</h5>
+                        <p class="mb-0">info@figueiredoit.pt</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px; border-radius: 10px;">
+                        <i class="fa fa-map-marker-alt text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1">Morada</h5>
+                        <p class="mb-0">Av. da Liberdade 110, Lisboa</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.3s">
-                <img class="img-fluid mb-4" src="img/icon-10.png" alt="">
-                <h1 class="display-4" data-toggle="counter-up">123456</h1>
-                <p class="fs-5 text-primary mb-0">Monthly Transactions</p>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.5s">
-                <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                <h1 class="display-4" data-toggle="counter-up">123456</h1>
-                <p class="fs-5 text-primary mb-0">Total Transactions</p>
+            <div class="col-lg-6">
+                <div class="bg-light rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
+                    <h3 class="mb-4">Envie-nos uma mensagem</h3>
+                    
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                <strong>{{ message }}</strong>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ contact_form.name }}
+                                    <label for="{{ contact_form.name.id_for_label }}">O seu nome</label>
+                                </div>
+                                {% if contact_form.name.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.name.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ contact_form.email }}
+                                    <label for="{{ contact_form.email.id_for_label }}">O seu email</label>
+                                </div>
+                                {% if contact_form.email.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.email.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ contact_form.subject }}
+                                    <label for="{{ contact_form.subject.id_for_label }}">Assunto</label>
+                                </div>
+                                {% if contact_form.subject.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.subject.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ contact_form.message }}
+                                    <label for="{{ contact_form.message.id_for_label }}">Mensagem</label>
+                                </div>
+                                {% if contact_form.message.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.message.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
- Facts End -->
-
+<!-- Contact Form End -->
 
 <!-- Features Start -->
-<div class="container-fluid py-5 bg-light">
+<div class="container-fluid py-5">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6">Porquê Escolher-nos</h1>
+            <h2 class="display-6">Porquê Escolher-nos</h2>
             <p class="text-primary fs-5 mb-5">Excelência em Soluções IoT e Tecnologia</p>
         </div>
         <div class="row g-5">
@@ -109,7 +239,7 @@
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-3">Software e Sensores Personalizados</h5>
-                        <span>Desenvolvemos soluções personalizadas de hardware e software que se adaptam às suas necessidades, garantindo máxima eficiência para seu negócio.</span>
+                        <span>Desenvolvemos soluções personalizadas de hardware e software que se adaptam às suas necessidades, garantindo máxima eficiência para o seu negócio.</span>
                     </div>
                 </div>
             </div>
@@ -131,7 +261,7 @@
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-3">Sistema de Monitorização e Alertas</h5>
-                        <span>Monitorização 24 por dia com alertas personalizáveis para métricas críticas, garantindo respostas rápidas a qualquer anomalia.</span>
+                        <span>Monitorização 24 horas por dia com alertas personalizáveis para métricas críticas, garantindo respostas rápidas a qualquer anomalia.</span>
                     </div>
                 </div>
             </div>
@@ -142,7 +272,7 @@
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-3">Otimização com IA</h5>
-                        <span>Inteligência Artificial que aprende continuamente com seus dados, identificando padrões e otimizando a eficiência operacional.</span>
+                        <span>Inteligência Artificial que aprende continuamente com os seus dados, identificando padrões e otimizando a eficiência operacional.</span>
                     </div>
                 </div>
             </div>
@@ -153,7 +283,7 @@
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-3">Automação de Processos</h5>
-                        <span>Automatizamos processos complexos e integramos com seus sistemas existentes, criando fluxos de trabalho mais eficientes.</span>
+                        <span>Automatizamos processos complexos e integramos com os seus sistemas existentes, criando fluxos de trabalho mais eficientes.</span>
                     </div>
                 </div>
             </div>
@@ -164,7 +294,7 @@
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-3">Suporte Garantido</h5>
-                        <span>Suporte técnico especializado, com assistência rápida e manutenção preventiva para seu sistema.</span>
+                        <span>Suporte técnico especializado, com assistência rápida e manutenção preventiva para o seu sistema.</span>
                     </div>
                 </div>
             </div>
@@ -173,174 +303,11 @@
 </div>
 <!-- Features End -->
 
-
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Image Carousel (3 Items Per View)</h2>
-    
-    <!-- Carousel Component -->
-    <div id="imageCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="5000">
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-            <!-- First slide with 3 items -->
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Mountain Landscape">
-                            <div class="carousel-item-caption">
-                                <h5>Mountain Landscape</h5>
-                                <p>Beautiful view of mountains</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Beach Sunset">
-                            <div class="carousel-item-caption">
-                                <h5>Beach Sunset</h5>
-                                <p>Incredible sunset view</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="City Skyline">
-                            <div class="carousel-item-caption">
-                                <h5>City Skyline</h5>
-                                <p>City at night</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Second slide with 3 items -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Beach Sunset">
-                            <div class="carousel-item-caption">
-                                <h5>Beach Sunset</h5>
-                                <p>Incredible sunset view</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="City Skyline">
-                            <div class="carousel-item-caption">
-                                <h5>City Skyline</h5>
-                                <p>City at night</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Forest Trail">
-                            <div class="carousel-item-caption">
-                                <h5>Forest Trail</h5>
-                                <p>Path through the woods</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Third slide with 3 items -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="City Skyline">
-                            <div class="carousel-item-caption">
-                                <h5>City Skyline</h5>
-                                <p>City at night</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Forest Trail">
-                            <div class="carousel-item-caption">
-                                <h5>Forest Trail</h5>
-                                <p>Path through the woods</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Snow Capped Mountains">
-                            <div class="carousel-item-caption">
-                                <h5>Snow Capped Mountains</h5>
-                                <p>Winter mountain scene</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Fourth slide with 3 items -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Forest Trail">
-                            <div class="carousel-item-caption">
-                                <h5>Forest Trail</h5>
-                                <p>Path through the woods</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Snow Capped Mountains">
-                            <div class="carousel-item-caption">
-                                <h5>Snow Capped Mountains</h5>
-                                <p>Winter mountain scene</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="carousel-item-content">
-                            <img src="/api/placeholder/400/250" alt="Desert Landscape">
-                            <div class="carousel-item-caption">
-                                <h5>Desert Landscape</h5>
-                                <p>Beautiful sandy terrain</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
-
-
-
 <!-- FAQs Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5 bg-light">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6">FAQs</h1>
+            <h2 class="display-6">FAQs</h2>
             <p class="text-primary fs-5 mb-5">Perguntas Frequentes</p>
         </div>
         <div class="row justify-content-center">
@@ -398,35 +365,7 @@
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                A instalação é realizada por nossa equipa técnica especializada, que fará um levantamento inicial das necessidades e definirá o melhor posicionamento para cada sensor. A manutenção é maioritariamente remota, através de atualizações de software automáticas. Para manutenção física, dispomos de um serviço de assistência técnica com resposta em 24-48 horas.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
-                        <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Como posso aceder aos dados e relatórios?
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Disponibilizamos uma plataforma web intuitiva e uma aplicação móvel para acesso aos dados em tempo real. Os relatórios podem ser personalizados e programados para envio automático com a periodicidade desejada. A plataforma permite também a exportação de dados em vários formatos (Excel, CSV, PDF) para análises mais detalhadas.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                        <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Que tipo de suporte técnico é oferecido?
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Oferecemos suporte técnico completo através de múltiplos canais: telefone, email e chat online. A nossa equipa está disponível em horário alargado para resolver questões técnicas, fornecer formação adicional ou ajudar na interpretação dos dados. Para clientes empresariais, disponibilizamos um gestor de conta dedicado.
+                                A instalação é realizada pela nossa equipa técnica especializada, que fará um levantamento inicial das necessidades e definirá o melhor posicionamento para cada sensor. A manutenção é maioritariamente remota, através de atualizações de software automáticas. Para manutenção física, dispomos de um serviço de assistência técnica com resposta em 24-48 horas.
                             </div>
                         </div>
                     </div>
@@ -437,34 +376,59 @@
 </div>
 <!-- FAQs End -->
 
+<!-- Call to Action Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-primary rounded p-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-8 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="text-white mb-4">Vamos transformar o seu negócio com tecnologia inteligente</h1>
+                    <p class="text-white mb-4">Entre em contacto para uma consultoria gratuita onde iremos analisar as suas necessidades e propor soluções personalizadas.</p>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt fa-2x text-white me-3"></i>
+                        <div>
+                            <h5 class="text-white mb-0">Fale connosco agora</h5>
+                            <p class="text-white mb-0">+351 912 345 678</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <a href="{% url 'contact' %}" class="btn btn-light py-3 px-5">Marcar Consultoria Gratuita</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Call to Action End -->
 
-<!-- Custom JavaScript to enable single item movement -->
+<!-- Owl Carousel Setup -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize the carousel with custom options
-        var myCarousel = document.getElementById('imageCarousel');
-        var carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 5000,  // Auto-cycle every 5 seconds
-            wrap: true,      // Continuous loop
-            touch: true      // Enable touch swiping on mobile
-        });
-        
-        // Get carousel next and prev buttons
-        var nextButton = document.querySelector('.carousel-control-next');
-        var prevButton = document.querySelector('.carousel-control-prev');
-        
-        // Adding one-item-at-a-time movement
-        nextButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            carousel.next();
-        });
-        
-        prevButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            carousel.prev();
+        $(".testimonial-carousel").owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            margin: 25,
+            loop: true,
+            center: true,
+            dots: true,
+            nav: true,
+            navText : [
+                '<i class="bi bi-chevron-left"></i>',
+                '<i class="bi bi-chevron-right"></i>'
+            ],
+            responsive: {
+                0:{
+                    items:1
+                },
+                768:{
+                    items:2
+                },
+                992:{
+                    items:3
+                }
+            }
         });
     });
 </script>
-
 
 {% endblock %}

@@ -6,4 +6,10 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('services/', views.services, name='services'),
     path('contact/', views.contact, name='contact'),
+    
+    # Novas rotas
+    path('meeting-request/', views.MeetingRequestView.as_view(), name='meeting_request'),
+    path('meeting-request/success/', views.meeting_request_success, name='meeting_request_success'),
+    path('budget-request/', views.BudgetRequestView.as_view(), name='budget_request'),
+    path('budget-request/success/', views.budget_request_success, name='budget_request_success'),
 ]

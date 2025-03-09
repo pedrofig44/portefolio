@@ -1,0 +1,342 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-light py-5 mb-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 mb-3 animated slideInDown">Solicitar Orçamento</h1>
+                <p class="animated slideInDown mb-4">Precisa de um orçamento detalhado para o seu projeto? Preencha o formulário abaixo com as informações do seu projeto e a nossa equipa irá preparar uma proposta personalizada de acordo com as suas necessidades.</p>
+            </div>
+            <div class="col-lg-6 animated fadeIn">
+                <img class="img-fluid animated pulse" style="animation-duration: 3s;" src="{% static 'img/budget_image.png' %}" alt="Imagem de Orçamento">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Budget Request Form Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="mb-4">Formulário de Solicitação de Orçamento</h2>
+                
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            <strong>{{ message }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                
+                <form method="post" class="needs-validation">
+                    {% csrf_token %}
+                    
+                    <div class="row g-3">
+                        <!-- Informações do Solicitante -->
+                        <div class="col-12">
+                            <h5 class="mb-3">Informações do Solicitante</h5>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.name }}
+                                <label for="{{ form.name.id_for_label }}">Nome</label>
+                            </div>
+                            {% if form.name.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.name.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.email }}
+                                <label for="{{ form.email.id_for_label }}">Email</label>
+                            </div>
+                            {% if form.email.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.email.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.phone }}
+                                <label for="{{ form.phone.id_for_label }}">Telefone</label>
+                            </div>
+                            {% if form.phone.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.phone.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.company }}
+                                <label for="{{ form.company.id_for_label }}">Empresa</label>
+                            </div>
+                            {% if form.company.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.company.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.position }}
+                                <label for="{{ form.position.id_for_label }}">Cargo (opcional)</label>
+                            </div>
+                            {% if form.position.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.position.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <!-- Detalhes do Projeto -->
+                        <div class="col-12 mt-4">
+                            <h5 class="mb-3">Detalhes do Projeto</h5>
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.service_type }}
+                                <label for="{{ form.service_type.id_for_label }}">Tipo de Serviço</label>
+                            </div>
+                            {% if form.service_type.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.service_type.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.project_description }}
+                                <label for="{{ form.project_description.id_for_label }}">Descrição do Projeto</label>
+                            </div>
+                            {% if form.project_description.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.project_description.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.budget_range }}
+                                <label for="{{ form.budget_range.id_for_label }}">Faixa de Orçamento</label>
+                            </div>
+                            {% if form.budget_range.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.budget_range.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.timeframe }}
+                                <label for="{{ form.timeframe.id_for_label }}">Prazo Desejado</label>
+                            </div>
+                            {% if form.timeframe.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.timeframe.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.additional_requirements }}
+                                <label for="{{ form.additional_requirements.id_for_label }}">Requisitos Adicionais (opcional)</label>
+                            </div>
+                            {% if form.additional_requirements.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.additional_requirements.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.how_did_you_find_us }}
+                                <label for="{{ form.how_did_you_find_us.id_for_label }}">Como nos encontrou? (opcional)</label>
+                            </div>
+                            {% if form.how_did_you_find_us.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.how_did_you_find_us.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-12 mt-4">
+                            <button class="btn btn-primary py-3 px-5" type="submit">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-light rounded p-4 shadow-sm mb-4">
+                    <h4 class="mb-3">Como funciona o nosso processo de orçamentação</h4>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Submissão do Pedido</h5>
+                            <p class="mb-0">Preencha e envie o formulário com os detalhes do seu projeto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Análise Inicial</h5>
+                            <p class="mb-0">Nossa equipa técnica analisa os requisitos e avalia a viabilidade do projeto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Contacto para Esclarecimentos</h5>
+                            <p class="mb-0">Se necessário, entramos em contacto para esclarecer detalhes e alinhar expectativas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                            <span class="fw-bold">4</span>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Elaboração da Proposta</h5>
+                            <p class="mb-0">Preparamos uma proposta detalhada com escopo, cronograma e valores.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                            <span class="fw-bold">5</span>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Apresentação e Ajustes</h5>
+                            <p class="mb-0">Apresentamos a proposta e realizamos ajustes conforme necessário.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-light rounded p-4 shadow-sm">
+                    <h4 class="mb-3">Dicas para um orçamento mais preciso</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-info-circle text-primary me-2"></i> Seja específico quanto ao escopo do projeto.</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-primary me-2"></i> Mencione prazos e restrições importantes.</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-primary me-2"></i> Indique se já possui alguma infraestrutura ou tecnologia.</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-primary me-2"></i> Descreva os principais desafios e objetivos.</li>
+                        <li class="mb-2"><i class="fas fa-info-circle text-primary me-2"></i> Informe sobre quaisquer requisitos específicos de integração.</li>
+                    </ul>
+                    
+                    <div class="mt-4 text-center">
+                        <p class="mb-3">Tem dúvidas sobre como detalhar o seu projeto?</p>
+                        <a href="{% url 'contact' %}" class="btn btn-outline-primary">Fale Connosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Budget Request Form End -->
+
+<!-- Success Stories Section Start -->
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="mb-4">Projetos Bem-Sucedidos</h2>
+            <p class="mb-5">Conheça alguns dos projetos que desenvolvemos para clientes com necessidades semelhantes</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-industry fa-3x text-primary"></i>
+                    </div>
+                    <h4>Sistema de Monitorização Industrial</h4>
+                    <p>Implementação de 120 sensores em linha de produção para monitorização em tempo real. Redução de 32% nos tempos de inatividade e economia de energia de 18%.</p>
+                    <div class="d-flex align-items-center">
+                        <span class="bg-primary px-3 py-1 rounded text-white me-2">Indústria</span>
+                        <span class="bg-primary px-3 py-1 rounded text-white">IoT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-building fa-3x text-primary"></i>
+                    </div>
+                    <h4>Edifício Inteligente</h4>
+                    <p>Solução de automação para complexo de escritórios com 5.000m². Implementação de sensores de ocupação, controle climático e gestão energética. Economia anual de 28% nos custos operacionais.</p>
+                    <div class="d-flex align-items-center">
+                        <span class="bg-primary px-3 py-1 rounded text-white me-2">Imobiliário</span>
+                        <span class="bg-primary px-3 py-1 rounded text-white">Automação</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-tractor fa-3x text-primary"></i>
+                    </div>
+                    <h4>Agricultura de Precisão</h4>
+                    <p>Rede de 250 sensores para monitorização de cultivo em 50 hectares. Inclui análise de solo, clima e irrigação automatizada com IA. Aumento de produtividade de 23% e redução de uso de água em 40%.</p>
+                    <div class="d-flex align-items-center">
+                        <span class="bg-primary px-3 py-1 rounded text-white me-2">Agricultura</span>
+                        <span class="bg-primary px-3 py-1 rounded text-white">IA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Success Stories Section End -->
+
+<style>
+    .form-floating > .form-control,
+    .form-floating > .form-select {
+        height: calc(3.5rem + 2px);
+        padding: 1rem .75rem;
+    }
+    
+    .form-floating > textarea.form-control {
+        height: 140px;
+    }
+    
+    .btn-square {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+{% endblock %}
