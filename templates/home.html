@@ -4,20 +4,17 @@
 
 {% load static %}
 
-<!-- Header Start -->
-<div class="container-fluid hero-header bg-light py-5 mb-5">
+<!-- Header Start with Background Image -->
+<div class="container-fluid hero-header hero-background py-5 mb-5">
     <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-                <h1 class="display-4 mb-3 animated slideInDown">Soluções Inteligentes para a Era Digital</h1>
-                <p class="animated slideInDown mb-4">Especialistas em Sensores e Inteligência Artificial, oferecendo soluções tecnológicas inovadoras para a sua empresa. Através de sensores avançados, automação inteligente e análise de dados em tempo real, transformamos o seu negócio para tomar decisões mais eficientes e gerir melhor os seus recursos.</p>
-                <div class="d-flex gap-3 animated slideInDown">
-                    <a href="{% url 'contact' %}" class="btn btn-primary py-3 px-4">Solicitar Consultoria</a>
-                    <a href="#casos-uso" class="btn btn-outline-primary py-3 px-4">Ver Casos de Uso</a>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 hero-content text-center">
+                <h1 class="display-4 mb-4 animated slideInDown text-white">Soluções Inteligentes para a Era Digital</h1>
+                <p class="animated slideInDown mb-5 text-white">Especialistas em Sensores e Inteligência Artificial, oferecendo soluções tecnológicas inovadoras para a sua empresa. Através de sensores avançados, automação inteligente e análise de dados em tempo real, transformamos o seu negócio para tomar decisões mais eficientes e gerir melhor os seus recursos.</p>
+                <div class="d-flex gap-4 justify-content-center animated slideInDown">
+                    <a href="{% url 'contact' %}" class="btn btn-primary py-3 px-5">Solicitar Consultoria</a>
+                    <a href="#casos-uso" class="btn btn-outline-light py-3 px-5">Ver Casos de Uso</a>
                 </div>
-            </div>
-            <div class="col-lg-6 animated fadeIn">
-                <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="{% static 'img/hero_image.png' %}" alt="IoT e Tecnologia Ilustração">
             </div>
         </div>
     </div>
@@ -74,11 +71,11 @@
 <!-- Services End -->
 
 <!-- About Start -->
-<div class="container-xxl py-5 bg-light">
+<div class="container-fluid py-5 about-section">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid rounded shadow" src="{% static 'img/about_us.png' %}" alt="Consultoria em IoT e Tecnologia">
+                <img class="img-fluid rounded" src="{% static 'img/about_us.png' %}" alt="Consultoria em IoT e Tecnologia">
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
@@ -171,7 +168,6 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     {{ contact_form.name }}
-                                    <label for="{{ contact_form.name.id_for_label }}">O seu nome</label>
                                 </div>
                                 {% if contact_form.name.errors %}
                                     <div class="invalid-feedback d-block">
@@ -182,7 +178,6 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     {{ contact_form.email }}
-                                    <label for="{{ contact_form.email.id_for_label }}">O seu email</label>
                                 </div>
                                 {% if contact_form.email.errors %}
                                     <div class="invalid-feedback d-block">
@@ -193,7 +188,6 @@
                             <div class="col-12">
                                 <div class="form-floating">
                                     {{ contact_form.subject }}
-                                    <label for="{{ contact_form.subject.id_for_label }}">Assunto</label>
                                 </div>
                                 {% if contact_form.subject.errors %}
                                     <div class="invalid-feedback d-block">
@@ -204,7 +198,6 @@
                             <div class="col-12">
                                 <div class="form-floating">
                                     {{ contact_form.message }}
-                                    <label for="{{ contact_form.message.id_for_label }}">Mensagem</label>
                                 </div>
                                 {% if contact_form.message.errors %}
                                     <div class="invalid-feedback d-block">

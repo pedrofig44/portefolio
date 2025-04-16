@@ -40,7 +40,7 @@ class ContactMessageForm(forms.ModelForm):
     )
     
     subject = forms.ChoiceField(
-        choices=ContactMessage.SUBJECT_CHOICES,
+        choices=[('', 'Selecione o assunto')] + list(ContactMessage.SUBJECT_CHOICES),
         widget=forms.Select(attrs={
             'class': 'form-control'
         })
@@ -49,8 +49,9 @@ class ContactMessageForm(forms.ModelForm):
     message = forms.CharField(
         widget=forms.Textarea(attrs={
             'class': 'form-control',
-            'rows': 5,
-            'placeholder': 'A sua mensagem'
+            'rows': 6,
+            'placeholder': 'A sua mensagem',
+            'style': 'min-height: 120px;'
         })
     )
     
@@ -67,7 +68,13 @@ class ContactMessageForm(forms.ModelForm):
             if len(phone_digits) < 9:
                 raise forms.ValidationError(_('Por favor, introduza um número de telefone válido.'))
         return phone
-
+        
+    def clean_subject(self):
+        """Valida que o assunto foi selecionado."""
+        subject = self.cleaned_data.get('subject')
+        if subject == '':
+            raise forms.ValidationError(_('Por favor, selecione um assunto.'))
+        return subject
 
 class MeetingRequestForm(forms.ModelForm):
     """Formulário para solicitações de reunião."""

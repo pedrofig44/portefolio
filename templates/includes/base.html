@@ -55,7 +55,6 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0">
-                <a href="{% url 'home' %}" class="nav-item nav-link">Início</a>
                 <a href="{% url 'about' %}" class="nav-item nav-link">Sobre Nós</a>
                 <a href="{% url 'services' %}" class="nav-item nav-link">Serviços</a>
                 
@@ -85,8 +84,6 @@
                     </div>
                 </div>
                 
-                <a href="{% url 'contact' %}" class="nav-item nav-link">Contacto</a>
-                
                 <div class="d-flex align-items-center ms-lg-4">
                     {% if user.is_authenticated %}
                         <div class="nav-item dropdown">
@@ -94,9 +91,6 @@
                                 <i class="fas fa-user-circle me-1"></i>{{ user.username }}
                             </a>
                             <div class="dropdown-menu shadow-sm m-0">
-                                <a href="{% url 'task:task_list' %}" class="dropdown-item">
-                                    <i class="fas fa-tasks me-2 text-primary"></i>Tarefas
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a href="#" class="dropdown-item">
                                     <i class="fas fa-cog me-2 text-primary"></i>Configurações
@@ -121,7 +115,7 @@
     <!-- Navbar End -->
 
     <!-- Alerts Start -->
-    <div class="container mt-4">
+    <div class="container">
         {% include 'includes/alerts.html' %}
     </div>
     <!-- Alerts End -->
@@ -143,7 +137,7 @@
                         <img class="img-fluid me-2" src="{% static 'img/logo_figueiredo_it.png' %}" alt="FigueiredoIT Logo" style="width: 45px; height: 45px; object-fit: contain;">
                         FigueiredoIT
                     </h1>
-                    <span>Soluções tecnológicas inovadoras para a sua empresa. Especialistas em IoT, Inteligência Artificial e Machine Learning, oferecendo consultoria informática personalizada para otimização de processos e suporte à decisão.</span>
+                    <span>Soluções tecnológicas inovadoras para a sua empresa. Especialistas em IoT, Inteligência Artificial oferecendo consultoria informática personalizada para otimização de processos e suporte à decisão.</span>
                     
                     <div class="d-flex mt-4">
                         <a class="btn btn-square rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -216,9 +210,7 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
-    
-    <!-- Extra JavaScript -->
-    {% block extra_js %}{% endblock %}
+
 </body>
 
 </html>
