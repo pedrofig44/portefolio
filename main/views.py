@@ -70,3 +70,10 @@ class BudgetRequestView(CreateView):
 
 def budget_request_success(request):
     return render(request, 'main/budget_request_success.html')
+
+
+def iot_industrial(request):
+    return render(request, 'use_case/iot_industrial.html')
+
+def iot_agriculture(request):
+    return render(request, 'use_case/iot_agriculture.html')

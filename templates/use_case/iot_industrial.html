@@ -1,0 +1,344 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-light py-5 mb-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 mb-3 animated slideInDown">IoT Industrial</h1>
+                <p class="animated slideInDown mb-4">Transformamos indústrias através de soluções IoT avançadas que monitorizam equipamentos, otimizam processos e aumentam a eficiência operacional. Descubra como a nossa tecnologia pode transformar a sua operação industrial.</p>
+            </div>
+            <div class="col-lg-6 animated fadeIn">
+                <img class="img-fluid animated pulse" style="animation-duration: 3s;" src="/api/placeholder/600/400" alt="IoT Industrial">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Introduction Section Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="h-100">
+                    <h2 class="display-6 mb-4">A Revolução Industrial 4.0</h2>
+                    <p>A Indústria 4.0 representa uma transformação digital nas práticas de fabricação e processos industriais. No centro desta revolução está a Internet das Coisas (IoT), que permite a comunicação entre máquinas, sensores, pessoas e sistemas.</p>
+                    <p class="mb-4">Através da recolha de dados em tempo real, as empresas conseguem obter insights valiosos que otimizam operações, reduzem custos e aumentam a produtividade. Descubra como as nossas soluções IoT podem preparar a sua indústria para o futuro.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-cogs text-primary me-3 fs-4"></i>
+                        <span>Monitorização avançada de equipamentos com sensores IoT</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-chart-line text-primary me-3 fs-4"></i>
+                        <span>Análise preditiva para evitar falhas e otimizar manutenção</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-tachometer-alt text-primary me-3 fs-4"></i>
+                        <span>Controle e otimização do consumo energético</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-server text-primary me-3 fs-4"></i>
+                        <span>Integração e visualização de dados em tempo real</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="/api/placeholder/600/400" alt="Indústria 4.0">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(9, 128, 155, 0.1);">
+                        <div class="p-4">
+                            <h3 class="text-primary">Benefícios Principais</h3>
+                            <ul class="list-unstyled text-white">
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Redução de 35% nos custos de manutenção</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Aumento de 25% na eficiência operacional</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Diminuição de 40% no tempo de inatividade</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Economia de 20% no consumo energético</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> ROI médio em 12-18 meses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Introduction Section End -->
+
+
+<!-- Use Cases Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="display-6 mb-5">Casos de Uso em Ambiente Industrial</h2>
+        </div>
+        
+        <!-- Use Case 1: Condition Monitoring -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Preditiva">
+                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
+                        <i class="fas fa-cogs fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-4">Monitorização de Condições e Manutenção Preditiva</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Paralisações inesperadas de máquinas causam tempo de inatividade dispendioso. Pequenas fábricas frequentemente não possuem recursos para sistemas de monitorização complexos.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores de vibração alimentados por bateria em motores, bombas e ventiladores; sensores de temperatura em rolamentos, caixas de engrenagens e painéis elétricos; sensores de corrente monitorizando o consumo de energia das máquinas.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Detecção de anomalias (vibração excessiva, superaquecimento, consumo energético incomum) antes da falha</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Permite agendamento de manutenção proativa, reduzindo tempo de inatividade</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Prolongamento da vida útil do equipamento</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Instalação simples sem necessidade de cabeamento complexo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 2: Environmental Monitoring -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-6 order-lg-2">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Ambiental">
+                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
+                        <i class="fas fa-temperature-high fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 class="mb-4">Monitorização Ambiental</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Manter temperatura/humidade específicas para processos (ex: cura, armazenamento), garantir conforto/segurança aos trabalhadores ou cumprir regulamentações. Desperdício de energia em sistemas HVAC.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores de temperatura e humidade distribuídos em áreas de produção, salas de armazenamento (matérias-primas, produtos acabados), laboratórios ou próximos a equipamentos sensíveis.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Garante a qualidade do produto em condições controladas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Melhora o ambiente de trabalho para os colaboradores</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Otimiza o uso de energia em sistemas HVAC</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados para relatórios de conformidade regulatória</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 3: Energy Monitoring -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Energética">
+                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
+                        <i class="fas fa-bolt fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-4">Monitorização Energética</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Custos elevados de energia representam uma despesa significativa. Necessidade de entender onde a energia está sendo consumida para identificar oportunidades de economia.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores de corrente não invasivos conectados a máquinas específicas ou painéis de distribuição; contadores de pulso instalados em medidores existentes (eletricidade, gás, água).</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Identifica máquinas com alto consumo energético</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Detecta desperdícios (ex: máquinas deixadas ligadas desnecessariamente)</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Acompanha tendências de uso de energia</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Ajuda a justificar investimentos em eficiência energética</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 4: Tank/Silo Monitoring -->
+        <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.7s">
+            <div class="col-lg-6 order-lg-2">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização de Tanques">
+                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
+                        <i class="fas fa-water fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 class="mb-4">Monitorização de Nível em Tanques/Silos</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Verificar manualmente níveis de líquidos (refrigerantes, produtos químicos, resíduos) ou sólidos a granel (matérias-primas) é demorado e propenso a erros, potencialmente levando a falta de estoque ou transbordamentos.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores de nível ultrassônicos ou de radar alimentados por bateria, montados no topo de tanques ou silos, com comunicação sem fio via LoRaWAN.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Automatiza a verificação de níveis</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados de inventário em tempo real</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Previne esgotamentos ou derramamentos dispendiosos</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Otimiza cronogramas de reabastecimento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Use Cases End -->
+
+<!-- Call to Action Start 
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="display-6 mb-4">Pronto para transformar a sua indústria?</h2>
+                <p class="mb-4">Agende uma consultoria gratuita com a nossa equipa especializada para discutir como as nossas soluções IoT podem otimizar a sua operação industrial.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'meeting_request' %}" class="btn btn-primary py-3 px-5">
+                        <i class="fas fa-calendar-alt me-2"></i>Agendar Consultoria
+                    </a>
+                    <a href="{% url 'budget_request' %}" class="btn btn-outline-primary py-3 px-5">
+                        <i class="fas fa-file-invoice-dollar me-2"></i>Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-white rounded p-4 p-sm-5 shadow-sm">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-industry fa-3x text-primary mb-3"></i>
+                        <h4 class="mb-3">Solicite uma demonstração</h4>
+                        <p class="mb-0">Veja na prática como nossas soluções funcionam</p>
+                    </div>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Nome" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Telefone">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Empresa" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="4" placeholder="Descreva brevemente o seu interesse"></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Solicitar Demonstração</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ Call to Action End -->
+
+<!-- Case Studies Start
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="display-6 mb-5">Casos de Sucesso</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Metalurgia ABC</h5>
+                            <p class="mb-0 text-primary">Setor Metalúrgico</p>
+                        </div>
+                    </div>
+                    <p>Implementação de sensores de vibração em 25 máquinas críticas. Redução de 42% no tempo de inatividade não planejado e economia anual de €75.000 em custos de manutenção.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2024</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Bebidas Europa</h5>
+                            <p class="mb-0 text-primary">Indústria Alimentar</p>
+                        </div>
+                    </div>
+                    <p>Monitorização de temperatura em 12 tanques de fermentação. Melhoria de 15% na consistência do produto e redução de 28% nas perdas de matéria-prima devido a condições inadequadas.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2023</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Química Portuguesa</h5>
+                            <p class="mb-0 text-primary">Indústria Química</p>
+                        </div>
+                    </div>
+                    <p>Sistema de monitorização energética em 8 linhas de produção. Identificação de desperdícios que resultou em economia anual de €120.000 e redução de 22% na pegada de carbono.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2022</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+Case Studies End -->
+
+
+
+{% endblock %}

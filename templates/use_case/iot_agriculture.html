@@ -1,0 +1,346 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-light py-5 mb-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 mb-3 animated slideInDown">IoT na Agricultura</h1>
+                <p class="animated slideInDown mb-4">Transformamos a agricultura através de soluções IoT avançadas que monitorizam condições do solo, clima, recursos hídricos e rebanhos. Descubra como a nossa tecnologia pode otimizar a sua produção agrícola e pecuária com decisões baseadas em dados.</p>
+            </div>
+            <div class="col-lg-6 animated fadeIn">
+                <img class="img-fluid animated pulse" style="animation-duration: 3s;" src="/api/placeholder/600/400" alt="IoT na Agricultura">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Introduction Section Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="h-100">
+                    <h2 class="display-6 mb-4">Agricultura 4.0: A Revolução Digital no Campo</h2>
+                    <p>A Agricultura 4.0 representa uma transformação nas práticas agrícolas tradicionais através da integração de tecnologias digitais avançadas. No centro desta revolução está a Internet das Coisas (IoT), que permite a comunicação entre sensores, máquinas, pessoas e sistemas.</p>
+                    <p class="mb-4">Através da recolha de dados em tempo real, os agricultores conseguem obter insights valiosos que otimizam recursos, reduzem custos e aumentam a produtividade das culturas e criações. Descubra como as nossas soluções IoT podem transformar a sua operação agrícola.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-seedling text-primary me-3 fs-4"></i>
+                        <span>Monitorização avançada de culturas com sensores IoT</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-cloud-sun-rain text-primary me-3 fs-4"></i>
+                        <span>Análise detalhada de microclimas e condições ambientais</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-tint text-primary me-3 fs-4"></i>
+                        <span>Otimização do uso de água e irrigação de precisão</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-paw text-primary me-3 fs-4"></i>
+                        <span>Rastreamento e monitorização de rebanhos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="/api/placeholder/600/400" alt="Agricultura 4.0">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Introduction Section End -->
+
+<!-- Use Cases Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="display-6 mb-5">Casos de Uso na Agricultura</h2>
+        </div>
+        
+        <!-- Use Case 1: Soil Moisture Monitoring -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização de Solo">
+                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
+                        <i class="fas fa-seedling fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-4">Monitorização de Humidade e Condição do Solo</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Otimizar a irrigação é crucial para o rendimento das culturas, conservação de água e redução de custos (água, energia para bombeamento). Aplicar água em excesso ou de menos é prejudicial. As condições do solo também influenciam a absorção de nutrientes e o risco de doenças.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores de humidade do solo alimentados por bateria (geralmente combinados com temperatura e às vezes condutividade elétrica) inseridos em várias profundidades e locais nos campos. Estes sensores transmitem periodicamente dados para um gateway central usando tecnologia LoRaWAN.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Permite irrigação de precisão – irrigando apenas quando e onde necessário</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Leva a economias significativas de água e energia</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Melhora a saúde das culturas e o rendimento</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Ajuda a compreender tendências de saúde do solo ao longo do tempo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 2: Environmental Monitoring -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-6 order-lg-2">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Ambiental">
+                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
+                        <i class="fas fa-cloud-sun-rain fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 class="mb-4">Monitorização Ambiental e de Microclimas</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>As condições climáticas variam significativamente mesmo em curtas distâncias em uma fazenda. Previsões meteorológicas genéricas não são específicas o suficiente para decisões críticas como plantio, pulverização (velocidade/direção do vento), colheita ou proteção contra geadas.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Implantação de pequenas estações meteorológicas autônomas ou sensores individuais que medem temperatura, humidade, precipitação, velocidade/direção do vento, pressão barométrica e radiação solar em locais estratégicos da propriedade.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados ambientais hiper-locais em tempo real</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Permite melhor programação das atividades agrícolas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Possibilita alertas e mitigação eficaz de geadas</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Suporta modelagem de previsão de doenças baseada em umidade/temperatura</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 3: Livestock Tracking -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Rastreamento de Rebanhos">
+                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
+                        <i class="fas fa-paw fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-4">Rastreamento e Monitorização de Rebanhos</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Acompanhar o gado (especialmente bovinos ou ovinos) que pasta em grandes pastagens consome muito tempo. Monitorizar a saúde e o bem-estar dos animais remotamente pode ser desafiador, e garantir acesso à água é fundamental.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Etiquetas/coleiras GPS alimentadas por bateria fixadas aos animais, enviando periodicamente dados de localização. Algumas etiquetas também podem incluir monitores de atividade (detectando falta de movimento) ou sensores de temperatura como indicadores precoces de saúde.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Reduz o trabalho necessário para localizar animais</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Ajuda a prevenir roubo ou perda de animais</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Permite resposta mais rápida a potenciais problemas de saúde</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados para análise de padrões de pastoreio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 4: Water Resource Management -->
+        <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.7s">
+            <div class="col-lg-6 order-lg-2">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Gestão de Recursos Hídricos">
+                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
+                        <i class="fas fa-tint fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 class="mb-4">Gestão de Recursos Hídricos</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Verificar manualmente os níveis de água em tanques remotos (para gado ou irrigação) ou monitorizar o estado/fluxo dos sistemas de irrigação é ineficiente e pode levar a esgotamentos ou vazamentos/bloqueios não detectados.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores de nível ultrassônicos ou de pressão alimentados por bateria instalados em tanques de água. Medidores de fluxo ou sensores de pressão integrados em linhas de irrigação, potencialmente ligados a atuadores de válvulas para controle automático.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Fornece visibilidade em tempo real da disponibilidade de água</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Previne escassez inesperada para animais ou culturas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Ajuda a detectar rapidamente vazamentos ou mau funcionamento</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Automatiza o registro de uso de água para relatórios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Use Cases End -->
+
+<!-- Call to Action Start
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="display-6 mb-4">Pronto para transformar a sua produção agrícola?</h2>
+                <p class="mb-4">Agende uma consultoria gratuita com a nossa equipa especializada para discutir como as nossas soluções IoT podem otimizar a sua operação agrícola.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'meeting_request' %}" class="btn btn-primary py-3 px-5">
+                        <i class="fas fa-calendar-alt me-2"></i>Agendar Consultoria
+                    </a>
+                    <a href="{% url 'budget_request' %}" class="btn btn-outline-primary py-3 px-5">
+                        <i class="fas fa-file-invoice-dollar me-2"></i>Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-white rounded p-4 p-sm-5 shadow-sm">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-tractor fa-3x text-primary mb-3"></i>
+                        <h4 class="mb-3">Solicite uma demonstração</h4>
+                        <p class="mb-0">Veja na prática como nossas soluções funcionam na sua propriedade</p>
+                    </div>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Nome" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Telefone">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Tamanho da Propriedade (ha)" required>
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Tipo de Cultura Principal</option>
+                                    <option value="cereal">Cereais</option>
+                                    <option value="frutas">Frutas</option>
+                                    <option value="hortalicas">Hortaliças</option>
+                                    <option value="vinha">Vinha</option>
+                                    <option value="oliveira">Olival</option>
+                                    <option value="pecuaria">Pecuária</option>
+                                    <option value="floresta">Floresta</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="3" placeholder="Descreva brevemente as suas necessidades"></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Solicitar Demonstração</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ Call to Action End -->
+
+<!-- Case Studies Start 
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="display-6 mb-5">Casos de Sucesso</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Quinta do Sol</h5>
+                            <p class="mb-0 text-primary">Produção de Vinho</p>
+                        </div>
+                    </div>
+                    <p>Implementação de sensores de humidade do solo e estações meteorológicas em 20 hectares de vinha. Redução de 35% no consumo de água e melhoria de 18% na qualidade da uva, resultando em vinhos premium.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2023</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Agropecuária Alentejo</h5>
+                            <p class="mb-0 text-primary">Criação de Gado</p>
+                        </div>
+                    </div>
+                    <p>Rastreamento GPS de 500 cabeças de gado em 1200 hectares de pastagem. Redução de 75% no tempo gasto na localização de animais e diminuição de 40% em perdas por predadores ou roubo.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2024</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Hortícolas do Oeste</h5>
+                            <p class="mb-0 text-primary">Produção de Hortícolas</p>
+                        </div>
+                    </div>
+                    <p>Sistema integrado de monitorização ambiental e de solo em 15 hectares de produção hortícola intensiva. Aumento de 22% na produtividade e redução de 30% no uso de pesticidas devido à detecção precoce de condições favoráveis a doenças.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2022</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+Case Studies End -->
+
+
+
+
+
+{% endblock %}

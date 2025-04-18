@@ -56,15 +56,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0">
                 <a href="{% url 'about' %}" class="nav-item nav-link">Sobre Nós</a>
-                <a href="{% url 'services' %}" class="nav-item nav-link">Serviços</a>
                 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Casos de Uso</a>
                     <div class="dropdown-menu shadow-sm m-0">
-                        <a href="#" class="dropdown-item">IoT Industrial</a>
-                        <a href="#" class="dropdown-item">IoT na Agricultura</a>
+                        <a href="{% url 'iot_industrial' %}" class="dropdown-item">IoT Industrial</a>
+                        <a href="{% url 'iot_agriculture' %}" class="dropdown-item">IoT na Agricultura</a>
                         <a href="#" class="dropdown-item">Cidades Inteligentes</a>
-                        <a href="#" class="dropdown-item">Monitorização de Ambiente</a>
                         <a href="#" class="dropdown-item">Automação de Processos</a>
                     </div>
                 </div>
