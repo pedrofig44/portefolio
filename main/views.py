@@ -24,6 +24,9 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
 
+def faq(request):
+    return render(request, 'faq.html')
+
 def contact(request):
     contact_form = ContactMessageForm()
     

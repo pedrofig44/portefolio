@@ -1,0 +1,325 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-light py-5 mb-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 mb-3 animated slideInDown">Perguntas Frequentes</h1>
+                <p class="animated slideInDown mb-4">Aqui encontrará respostas para as perguntas mais comuns sobre os nossos serviços, tecnologias e metodologias. Se não encontrar a resposta que procura, não hesite em contactar-nos.</p>
+            </div>
+            <div class="col-lg-6 animated fadeIn">
+                <img class="img-fluid animated pulse" style="animation-duration: 3s;" src="{% static 'img/faq_image.png' %}" alt="Perguntas Frequentes">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- FAQ Section Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h2 class="display-6 mb-5">Informações Úteis sobre os Nossos Serviços</h2>
+        </div>
+        
+        <!-- Main FAQs Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- FAQ Categories Tabs -->
+                <ul class="nav nav-pills mb-5 justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#tab-1">Geral</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#tab-2">Sensores IoT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#tab-3">Inteligência Artificial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#tab-4">Implementação e Suporte</a>
+                    </li>
+                </ul>
+                
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- General FAQs -->
+                    <div id="tab-1" class="tab-pane fade show active">
+                        <div class="accordion" id="accordionGeneral">
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Quais são as principais áreas de especialização da FigueiredoIT?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionGeneral">
+                                    <div class="accordion-body">
+                                        A FigueiredoIT especializa-se em três áreas principais: Implementação de Sensores IoT, Soluções de Inteligência Artificial e Machine Learning, e Automação de Processos. Trabalhamos com clientes de diversos setores para fornecer soluções tecnológicas personalizadas que otimizam operações, reduzem custos e impulsionam a inovação nos seus negócios.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Como iniciar um projeto com a FigueiredoIT?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionGeneral">
+                                    <div class="accordion-body">
+                                        O processo inicia-se com uma reunião de consultoria gratuita onde discutimos as suas necessidades e objetivos. Em seguida, realizamos uma análise técnica para identificar as soluções mais adequadas. Depois, apresentamos uma proposta detalhada com escopo, cronograma e orçamento. Após a aprovação, iniciamos o desenvolvimento e implementação do projeto, sempre com comunicação constante e transparente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Qual é o tempo médio de implementação de um projeto?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    data-bs-parent="#accordionGeneral">
+                                    <div class="accordion-body">
+                                        O tempo de implementação varia conforme a complexidade do projeto. Projetos menores, como instalação de sensores IoT em um único local, podem ser concluídos em 2-4 semanas. Projetos de média escala, como implementação de sistemas de automação, geralmente levam 1-3 meses. Projetos mais complexos envolvendo IA e integração com múltiplos sistemas podem levar de 3 a 6 meses. Em todos os casos, fornecemos um cronograma detalhado no início do projeto.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Vocês oferecem suporte e manutenção pós-implementação?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionGeneral">
+                                    <div class="accordion-body">
+                                        Sim, oferecemos planos de suporte e manutenção abrangentes. Estes incluem monitorização contínua, atualizações de software, manutenção preventiva e suporte técnico. Dependendo das necessidades do cliente, podemos oferecer suporte em horário comercial ou 24/7 para sistemas críticos. Nosso objetivo é garantir que os sistemas funcionem de forma otimizada e com o mínimo de interrupções.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- IoT Sensors FAQs -->
+                    <div id="tab-2" class="tab-pane fade">
+                        <div class="accordion" id="accordionIoT">
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="accordion-header" id="headingIoT1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseIoT1" aria-expanded="true" aria-controls="collapseIoT1">
+                                        Como funcionam os sensores IoT na monitorização ambiental?
+                                    </button>
+                                </h2>
+                                <div id="collapseIoT1" class="accordion-collapse collapse show" aria-labelledby="headingIoT1"
+                                    data-bs-parent="#accordionIoT">
+                                    <div class="accordion-body">
+                                        Os nossos sensores IoT funcionam através de uma rede integrada que recolhe dados em tempo real. Cada sensor é especializado numa medição específica (temperatura, humidade, qualidade do ar, etc.) e transmite os dados para uma plataforma central. Esta informação pode ser acedida através de qualquer dispositivo com ligação à Internet, permitindo uma monitorização constante e alertas em tempo real.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="headingIoT2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseIoT2" aria-expanded="false" aria-controls="collapseIoT2">
+                                        Qual é a autonomia dos sensores e como são alimentados?
+                                    </button>
+                                </h2>
+                                <div id="collapseIoT2" class="accordion-collapse collapse" aria-labelledby="headingIoT2"
+                                    data-bs-parent="#accordionIoT">
+                                    <div class="accordion-body">
+                                        Os nossos sensores são projetados para máxima eficiência energética. Dependendo do modelo e da configuração, podem funcionar durante meses com baterias convencionais. Oferecemos também opções com painéis solares para locais exteriores, garantindo um funcionamento contínuo e sustentável. A duração exata da bateria é monitorizada e receberá alertas quando for necessária a substituição.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                                <h2 class="accordion-header" id="headingIoT3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseIoT3" aria-expanded="false" aria-controls="collapseIoT3">
+                                        Como é garantida a segurança dos dados recolhidos?
+                                    </button>
+                                </h2>
+                                <div id="collapseIoT3" class="accordion-collapse collapse" aria-labelledby="headingIoT3"
+                                    data-bs-parent="#accordionIoT">
+                                    <div class="accordion-body">
+                                        A segurança dos dados é uma prioridade absoluta. Utilizamos encriptação de ponta a ponta em todas as comunicações, servidores seguros em conformidade com o RGPD, e protocolos de autenticação robustos. Além disso, oferecemos opções de armazenamento local para clientes que prefiram manter os dados nas suas instalações.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="headingIoT4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseIoT4" aria-expanded="false" aria-controls="collapseIoT4">
+                                        Qual é o processo de instalação e manutenção?
+                                    </button>
+                                </h2>
+                                <div id="collapseIoT4" class="accordion-collapse collapse" aria-labelledby="headingIoT4"
+                                    data-bs-parent="#accordionIoT">
+                                    <div class="accordion-body">
+                                        A instalação é realizada pela nossa equipa técnica especializada, que fará um levantamento inicial das necessidades e definirá o melhor posicionamento para cada sensor. A manutenção é maioritariamente remota, através de atualizações de software automáticas. Para manutenção física, dispomos de um serviço de assistência técnica com resposta em 24-48 horas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI FAQs -->
+                    <div id="tab-3" class="tab-pane fade">
+                        <div class="accordion" id="accordionAI">
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="accordion-header" id="headingAI1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAI1" aria-expanded="true" aria-controls="collapseAI1">
+                                        Que tipos de soluções de IA vocês oferecem?
+                                    </button>
+                                </h2>
+                                <div id="collapseAI1" class="accordion-collapse collapse show" aria-labelledby="headingAI1"
+                                    data-bs-parent="#accordionAI">
+                                    <div class="accordion-body">
+                                        Oferecemos uma variedade de soluções de IA, incluindo análise preditiva para manutenção e otimização de recursos, sistemas de visão computacional para controle de qualidade e segurança, algoritmos de machine learning para análise de dados e identificação de padrões, e sistemas de apoio à decisão baseados em IA para gestão operacional. Cada solução é personalizada de acordo com as necessidades específicas do cliente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="headingAI2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAI2" aria-expanded="false" aria-controls="collapseAI2">
+                                        Quanto tempo leva para uma solução de IA mostrar resultados significativos?
+                                    </button>
+                                </h2>
+                                <div id="collapseAI2" class="accordion-collapse collapse" aria-labelledby="headingAI2"
+                                    data-bs-parent="#accordionAI">
+                                    <div class="accordion-body">
+                                        Os sistemas de IA normalmente começam a fornecer insights preliminares dentro de 1-2 meses após a implementação. No entanto, a IA é uma tecnologia que melhora com o tempo e com mais dados. Geralmente, resultados mais significativos e confiáveis começam a aparecer após 3-6 meses, quando o sistema teve tempo suficiente para aprender com padrões de dados específicos do cliente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                                <h2 class="accordion-header" id="headingAI3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAI3" aria-expanded="false" aria-controls="collapseAI3">
+                                        É necessário ter uma grande quantidade de dados para implementar soluções de IA?
+                                    </button>
+                                </h2>
+                                <div id="collapseAI3" class="accordion-collapse collapse" aria-labelledby="headingAI3"
+                                    data-bs-parent="#accordionAI">
+                                    <div class="accordion-body">
+                                        Embora mais dados geralmente levem a melhores resultados, desenvolvemos soluções adaptadas à quantidade de dados disponíveis. Para empresas com dados limitados, podemos utilizar técnicas como transfer learning, data augmentation e modelos pré-treinados. Além disso, podemos implementar sistemas que começam a coletar e analisar dados imediatamente, melhorando gradualmente conforme mais informações são acumuladas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="headingAI4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAI4" aria-expanded="false" aria-controls="collapseAI4">
+                                        Como integrar soluções de IA com os sistemas existentes?
+                                    </button>
+                                </h2>
+                                <div id="collapseAI4" class="accordion-collapse collapse" aria-labelledby="headingAI4"
+                                    data-bs-parent="#accordionAI">
+                                    <div class="accordion-body">
+                                        Nossas soluções são projetadas para integração perfeita com sistemas existentes através de APIs e middleware personalizados. Realizamos uma análise detalhada da infraestrutura tecnológica do cliente antes da implementação para identificar os pontos de integração. Nossa abordagem modular permite que as soluções de IA sejam implementadas gradualmente, minimizando interrupções nas operações diárias e permitindo que os usuários se adaptem às novas funcionalidades.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Implementation and Support FAQs -->
+                    <div id="tab-4" class="tab-pane fade">
+                        <div class="accordion" id="accordionSupport">
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="accordion-header" id="headingSupport1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSupport1" aria-expanded="true" aria-controls="collapseSupport1">
+                                        Como é o processo de implementação de um projeto?
+                                    </button>
+                                </h2>
+                                <div id="collapseSupport1" class="accordion-collapse collapse show" aria-labelledby="headingSupport1"
+                                    data-bs-parent="#accordionSupport">
+                                    <div class="accordion-body">
+                                        O processo de implementação segue uma metodologia estruturada: iniciamos com a análise de requisitos e planeamento detalhado, seguido pela configuração da infraestrutura necessária. Depois, procedemos com a instalação de hardware (quando aplicável) e implementação de software. Realizamos testes extensivos em ambiente controlado antes da implementação final. Após a implementação, realizamos formação para os utilizadores e monitorização intensiva nas primeiras semanas para garantir que tudo funciona conforme esperado.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="headingSupport2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSupport2" aria-expanded="false" aria-controls="collapseSupport2">
+                                        Que tipo de formação é fornecida aos utilizadores?
+                                    </button>
+                                </h2>
+                                <div id="collapseSupport2" class="accordion-collapse collapse" aria-labelledby="headingSupport2"
+                                    data-bs-parent="#accordionSupport">
+                                    <div class="accordion-body">
+                                        Oferecemos programas de formação abrangentes adaptados aos diferentes níveis de utilizadores: desde formação básica para utilizadores finais até formação técnica avançada para administradores de sistema. As sessões incluem tutoriais práticos, documentação detalhada e recursos online. Além disso, disponibilizamos vídeos tutoriais e sessões de acompanhamento para garantir que todos os utilizadores estão confortáveis com as novas tecnologias.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                                <h2 class="accordion-header" id="headingSupport3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSupport3" aria-expanded="false" aria-controls="collapseSupport3">
+                                        Quais são os níveis de suporte disponíveis?
+                                    </button>
+                                </h2>
+                                <div id="collapseSupport3" class="accordion-collapse collapse" aria-labelledby="headingSupport3"
+                                    data-bs-parent="#accordionSupport">
+                                    <div class="accordion-body">
+                                        Oferecemos três níveis de suporte: Básico (suporte por email e telefone durante horário comercial, tempo de resposta de até 24 horas), Avançado (suporte estendido 12 horas por dia, tempo de resposta de até 8 horas, manutenção preventiva trimestral) e Premium (suporte 24/7, tempo de resposta de até 2 horas, manutenção preventiva mensal, gestor de conta dedicado). Todos os planos incluem atualizações de software e monitorização remota.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="headingSupport4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSupport4" aria-expanded="false" aria-controls="collapseSupport4">
+                                        Como é garantida a continuidade do serviço durante atualizações ou manutenções?
+                                    </button>
+                                </h2>
+                                <div id="collapseSupport4" class="accordion-collapse collapse" aria-labelledby="headingSupport4"
+                                    data-bs-parent="#accordionSupport">
+                                    <div class="accordion-body">
+                                        Utilizamos uma abordagem de redundância e implementação faseada para minimizar o tempo de inatividade. A maioria das atualizações é realizada durante períodos de baixa utilização e previamente agendadas. Para sistemas críticos, implementamos arquiteturas redundantes que permitem atualizações sem interrupção do serviço. Além disso, sempre criamos backups completos antes de qualquer atualização significativa e temos protocolos de rollback imediato caso ocorra algum problema.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Section End -->
+
+<!-- Contact Card Start -->
+<div class="container-xxl py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="mb-4">Não encontrou a resposta que procurava?</h2>
+                <p class="fs-5 mb-4">A nossa equipa está disponível para esclarecer todas as suas dúvidas e fornecer informações adicionais sobre os nossos serviços.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="{% url 'contact' %}" class="btn btn-primary py-3 px-5">
+                        <i class="fas fa-envelope me-2"></i>Contacte-nos
+                    </a>
+                    <a href="{% url 'meeting_request' %}" class="btn btn-outline-primary py-3 px-5">
+                        <i class="fas fa-calendar-alt me-2"></i>Agendar Reunião
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Card End -->
+
+{% endblock %}

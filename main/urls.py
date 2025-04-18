@@ -6,6 +6,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('services/', views.services, name='services'),
     path('contact/', views.contact, name='contact'),
+    path('faq/', views.faq, name='faq'),  # New FAQ route
     
     # Novas rotas
     path('meeting-request/', views.MeetingRequestView.as_view(), name='meeting_request'),
