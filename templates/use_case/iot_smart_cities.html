@@ -1,0 +1,353 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-light py-5 mb-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 mb-3 animated slideInDown">Cidades Inteligentes</h1>
+                <p class="animated slideInDown mb-4">Transformamos espaços urbanos através de soluções IoT avançadas que otimizam recursos, melhoram a qualidade de vida e tornam as cidades mais sustentáveis. Descubra como a nossa tecnologia pode transformar a sua cidade em um ambiente inteligente e conectado.</p>
+            </div>
+            <div class="col-lg-6 animated fadeIn">
+                <img class="img-fluid animated pulse" style="animation-duration: 3s;" src="/api/placeholder/600/400" alt="Cidades Inteligentes">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Introduction Section Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="h-100">
+                    <h2 class="display-6 mb-4">A Revolução das Cidades Inteligentes</h2>
+                    <p>As cidades inteligentes representam uma transformação na gestão urbana através da integração de tecnologias digitais avançadas. No centro desta revolução está a Internet das Coisas (IoT), que permite a comunicação entre infraestruturas, sensores, pessoas e sistemas.</p>
+                    <p class="mb-4">Através da recolha de dados em tempo real, os gestores urbanos conseguem obter insights valiosos que otimizam operações, reduzem custos e melhoram a qualidade de vida dos cidadãos. Descubra como as nossas soluções IoT podem transformar a sua cidade.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-trash text-primary me-3 fs-4"></i>
+                        <span>Gestão inteligente de resíduos com sensores IoT</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-car text-primary me-3 fs-4"></i>
+                        <span>Estacionamento inteligente para redução de congestionamento</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-tint text-primary me-3 fs-4"></i>
+                        <span>Monitorização de consumo de água e gás em tempo real</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-wind text-primary me-3 fs-4"></i>
+                        <span>Monitorização ambiental para cidades mais saudáveis</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="/api/placeholder/600/400" alt="Cidade Inteligente">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(9, 128, 155, 0.1);">
+                        <div class="p-4">
+                            <h3 class="text-primary">Benefícios Principais</h3>
+                            <ul class="list-unstyled text-white">
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Redução de até 30% nos custos operacionais</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Diminuição de 25% na pegada ambiental</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Melhoria de 40% na eficiência dos serviços públicos</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Aumento de 20% na satisfação dos cidadãos</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> ROI médio em 18-24 meses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Introduction Section End -->
+
+
+<!-- Use Cases Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="display-6 mb-5">Casos de Uso em Cidades Inteligentes</h2>
+        </div>
+        
+        <!-- Use Case 1: Smart Waste Management -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Gestão Inteligente de Resíduos">
+                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
+                        <i class="fas fa-trash fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-4">Gestão Inteligente de Resíduos</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>As rotas de recolha de resíduos municipais são frequentemente fixas, levando a viagens ineficientes onde os camiões visitam contentores quase vazios ou encontram contentores a transbordar antes da recolha programada. Isto desperdiça combustível, tempo e recursos, e os contentores a transbordar causam problemas de higiene e reclamações dos residentes.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores ultrassónicos de nível alimentados por bateria instalados dentro de contentores de resíduos públicos. Estes sensores medem periodicamente o nível de enchimento e transmitem os dados através da rede LoRaWAN para um sistema central de gestão.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Permite rotas de recolha dinâmicas e otimizadas baseadas em níveis de enchimento em tempo real</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Reduz recolhas desnecessárias, economizando combustível e custos operacionais</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Previne transbordamentos e melhora a higiene pública</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados para planeamento de longo prazo e alocação de recursos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 2: Smart Parking -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-6 order-lg-2">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Estacionamento Inteligente">
+                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
+                        <i class="fas fa-car fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 class="mb-4">Estacionamento Inteligente</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>Condutores à procura de lugares de estacionamento contribuem significativamente para o congestionamento do tráfego, consumo de combustível e poluição do ar nos centros urbanos. As cidades não possuem dados em tempo real sobre a disponibilidade de estacionamento para orientar os motoristas ou fazer cumprir as regras de estacionamento de forma eficiente.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Sensores de deteção de veículos alimentados por bateria (frequentemente magnéticos ou ultrassónicos/radar) instalados em lugares de estacionamento individuais (na rua ou em parques de estacionamento). Estes sensores detetam a presença ou ausência de um veículo e reportam a mudança de estado via LoRaWAN.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados de disponibilidade de estacionamento em tempo real para aplicações ou sinais digitais</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Reduz o tempo de procura, congestionamento de tráfego e emissões</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Melhora a eficiência da fiscalização identificando ultrapassagens de tempo</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Gera dados para otimizar preços e planeamento de estacionamento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 3: Smart Metering -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Contadores Inteligentes">
+                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
+                        <i class="fas fa-tachometer-alt fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-4">Contadores Inteligentes (Água e Gás)</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>A leitura tradicional de contadores de serviços públicos requer visitas manuais por técnicos, o que é dispendioso, trabalhoso, propenso a erros e pouco frequente (por exemplo, trimestral). Isto limita a capacidade da empresa de serviços públicos de detetar fugas rapidamente ou fornecer aos clientes dados de consumo atualizados.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Adaptação de contadores de água ou gás existentes com contadores de pulsos ou implementação de novos contadores com módulos de comunicação LoRaWAN integrados. Estes dispositivos leem automaticamente o índice do contador periodicamente (por exemplo, diariamente ou de hora em hora) e transmitem as leituras.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Elimina custos de leitura manual de contadores</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Permite faturação precisa, remota e frequente</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados de consumo quase em tempo real, facilitando a deteção de fugas</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Melhora a eficiência operacional e a gestão da rede de distribuição</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 4: Environmental Monitoring -->
+        <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.7s">
+            <div class="col-lg-6 order-lg-2">
+                <div class="position-relative">
+                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Ambiental">
+                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
+                        <i class="fas fa-wind fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 class="mb-4">Monitorização Ambiental (Qualidade do Ar e Ruído)</h3>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">O Problema</h5>
+                    <p>As cidades precisam monitorizar condições ambientais como qualidade do ar (poluentes como PM2.5, NO2, O3, CO) e níveis de ruído para avaliar riscos à saúde pública, identificar pontos críticos de poluição, fazer cumprir regulamentos e avaliar o impacto de decisões de planeamento urbano ou medidas de tráfego. As estações de monitorização tradicionais são caras e escassas.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5 class="text-primary">Nossa Solução</h5>
+                    <p>Implantação de sensores de qualidade do ar e sensores de nível de ruído relativamente económicos, alimentados por bateria ou assistidos por energia solar, em numerosos locais da cidade (por exemplo, em postes de iluminação, edifícios). Estes sensores transmitem leituras ambientais periódicas para uma plataforma central.</p>
+                </div>
+                
+                <div class="bg-light p-4 rounded">
+                    <h5 class="text-primary">Benefícios</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Fornece dados granulares e em tempo real sobre condições ambientais em toda a cidade</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Ajuda a identificar fontes de poluição e informa avisos de saúde pública</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Apoia a formulação de políticas (ex: restrições de tráfego)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Melhora a qualidade de vida dos residentes através do monitorização de fatores de stress ambiental</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Use Cases End -->
+
+<!-- Call to Action Start 
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="display-6 mb-4">Pronto para transformar a sua cidade?</h2>
+                <p class="mb-4">Agende uma consultoria gratuita com a nossa equipa especializada para discutir como as nossas soluções IoT podem otimizar a gestão urbana e melhorar a qualidade de vida dos cidadãos.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'meeting_request' %}" class="btn btn-primary py-3 px-5">
+                        <i class="fas fa-calendar-alt me-2"></i>Agendar Consultoria
+                    </a>
+                    <a href="{% url 'budget_request' %}" class="btn btn-outline-primary py-3 px-5">
+                        <i class="fas fa-file-invoice-dollar me-2"></i>Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-light rounded p-4 p-sm-5 shadow-sm">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-city fa-3x text-primary mb-3"></i>
+                        <h4 class="mb-3">Solicite um estudo de viabilidade</h4>
+                        <p class="mb-0">Entenda como a sua cidade pode beneficiar de soluções IoT específicas</p>
+                    </div>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Nome" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Telefone">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Município/Organização" required>
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Área de Interesse Principal</option>
+                                    <option value="waste">Gestão de Resíduos</option>
+                                    <option value="parking">Estacionamento Inteligente</option>
+                                    <option value="metering">Contadores Inteligentes</option>
+                                    <option value="environment">Monitorização Ambiental</option>
+                                    <option value="multiple">Múltiplas Áreas</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="3" placeholder="Descreva brevemente os desafios urbanos que pretende resolver"></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Solicitar Estudo</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Call to Action End -->
+
+<!-- Case Studies Start 
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="display-6 mb-5">Casos de Sucesso</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Município de Lisboa</h5>
+                            <p class="mb-0 text-primary">Gestão de Resíduos</p>
+                        </div>
+                    </div>
+                    <p>Implementação de 350 sensores em contentores de resíduos em áreas turísticas. Redução de 28% nos custos operacionais de recolha e diminuição de 67% nas reclamações por contentores cheios. ROI alcançado em 14 meses.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2023</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Cidade do Porto</h5>
+                            <p class="mb-0 text-primary">Estacionamento Inteligente</p>
+                        </div>
+                    </div>
+                    <p>Rede de 500 sensores de estacionamento no centro histórico. Redução de 24% no tempo de procura por lugar, diminuição de 18% no congestionamento e aumento de 32% na rotatividade de estacionamento, beneficiando o comércio local.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2024</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle" src="/api/placeholder/80/80" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Águas de Coimbra</h5>
+                            <p class="mb-0 text-primary">Contadores Inteligentes</p>
+                        </div>
+                    </div>
+                    <p>Projeto piloto com 2.000 contadores inteligentes de água. Deteção precoce de 57 fugas significativas, redução de 9% no consumo total devido à melhor conscientização dos clientes e economia de 45.000€ anuais em custos de leitura manual.</p>
+                    <div class="border-top pt-3 mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>2022</span>
+                            <a href="#" class="text-primary">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Case Studies End -->
+
+
+{% endblock %}

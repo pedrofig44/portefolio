@@ -15,5 +15,7 @@ urlpatterns = [
     
     # Casos de Uso
     path('iot_industrial/', views.iot_industrial, name='iot_industrial'),
-    path('iot_agriculture/', views.iot_agriculture, name='iot_agriculture')
+    path('iot_agriculture/', views.iot_agriculture, name='iot_agriculture'),
+    path('iot_smart_cities/', views.iot_smart_cities, name='iot_smart_cities'),
+    path('automation/', views.automation, name='automation'),
 ]

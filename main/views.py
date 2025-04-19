@@ -77,3 +77,10 @@ def iot_industrial(request):
 
 def iot_agriculture(request):
     return render(request, 'use_case/iot_agriculture.html')
+
+def iot_smart_cities(request):
+    return render(request, 'use_case/iot_smart_cities.html')
+
+def automation(request):
+    return render(request, 'use_case/automation.html')
+
