@@ -54,102 +54,93 @@
             </div>
         </div>
         
+        <!-- Contact Form Section with Fixed Floating Labels -->
+        <!-- Contact Form Section - EXACT Copy from Main Page Structure with Map -->
         <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h2 class="mb-4">Envie-nos uma Mensagem</h2>
-                
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            <strong>{{ message }}</strong>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-                
-                <form method="post" class="needs-validation">
-                    {% csrf_token %}
-                    
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                {{ contact_form.name }}
-                                <label for="{{ contact_form.name.id_for_label }}">Nome</label>
+            <div class="col-lg-6">
+                <div class="bg-light rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
+                    <h3 class="mb-4">Envie-nos uma mensagem</h3>
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                <strong>{{ message }}</strong>
                             </div>
-                            {% if contact_form.name.errors %}
-                                <div class="invalid-feedback d-block">
-                                    {{ contact_form.name.errors }}
-                                </div>
-                            {% endif %}
-                        </div>
+                        {% endfor %}
+                    {% endif %}
                         
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                {{ contact_form.email }}
-                                <label for="{{ contact_form.email.id_for_label }}">Email</label>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ contact_form.name }}
+                                </div>
+                                {% if contact_form.name.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.name.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if contact_form.email.errors %}
-                                <div class="invalid-feedback d-block">
-                                    {{ contact_form.email.errors }}
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ contact_form.email }}
                                 </div>
-                            {% endif %}
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                {{ contact_form.phone }}
-                                <label for="{{ contact_form.phone.id_for_label }}">Telefone (opcional)</label>
+                                {% if contact_form.email.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.email.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if contact_form.phone.errors %}
-                                <div class="invalid-feedback d-block">
-                                    {{ contact_form.phone.errors }}
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ contact_form.phone }}
                                 </div>
-                            {% endif %}
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                {{ contact_form.company }}
-                                <label for="{{ contact_form.company.id_for_label }}">Empresa (opcional)</label>
+                                {% if contact_form.phone.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.phone.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if contact_form.company.errors %}
-                                <div class="invalid-feedback d-block">
-                                    {{ contact_form.company.errors }}
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ contact_form.company }}
                                 </div>
-                            {% endif %}
-                        </div>
-                        
-                        <div class="col-12">
-                            <div class="form-floating">
-                                {{ contact_form.subject }}
-                                <label for="{{ contact_form.subject.id_for_label }}">Assunto</label>
+                                {% if contact_form.company.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.company.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if contact_form.subject.errors %}
-                                <div class="invalid-feedback d-block">
-                                    {{ contact_form.subject.errors }}
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ contact_form.subject }}
                                 </div>
-                            {% endif %}
-                        </div>
-                        
-                        <div class="col-12">
-                            <div class="form-floating">
-                                {{ contact_form.message }}
-                                <label for="{{ contact_form.message.id_for_label }}">Mensagem</label>
+                                {% if contact_form.subject.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.subject.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if contact_form.message.errors %}
-                                <div class="invalid-feedback d-block">
-                                    {{ contact_form.message.errors }}
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ contact_form.message }}
                                 </div>
-                            {% endif %}
+                                {% if contact_form.message.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ contact_form.message.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensagem</button>
+                            </div>
                         </div>
-                        
-                        <div class="col-12">
-                            <button class="btn btn-primary py-3 px-5" type="submit">Enviar Mensagem</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-            
+
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
                     <iframe class="w-100 rounded mb-4" 

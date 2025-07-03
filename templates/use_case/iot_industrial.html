@@ -3,16 +3,14 @@
 
 {% block content %}
 
+
 <!-- Header Start -->
 <div class="container-fluid hero-header bg-light py-5 mb-5">
     <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
                 <h1 class="display-4 mb-3 animated slideInDown">IoT Industrial</h1>
                 <p class="animated slideInDown mb-4">Transformamos indústrias através de soluções IoT avançadas que monitorizam equipamentos, otimizam processos e aumentam a eficiência operacional. Descubra como a nossa tecnologia pode transformar a sua operação industrial.</p>
-            </div>
-            <div class="col-lg-6 animated fadeIn">
-                <img class="img-fluid animated pulse" style="animation-duration: 3s;" src="/api/placeholder/600/400" alt="IoT Industrial">
             </div>
         </div>
     </div>
@@ -49,19 +47,7 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="position-relative overflow-hidden rounded">
-                    <img class="img-fluid w-100" src="/api/placeholder/600/400" alt="Indústria 4.0">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(9, 128, 155, 0.1);">
-                        <div class="p-4">
-                            <h3 class="text-primary">Benefícios Principais</h3>
-                            <ul class="list-unstyled text-white">
-                                <li><i class="fas fa-check-circle text-primary me-2"></i> Redução de 35% nos custos de manutenção</li>
-                                <li><i class="fas fa-check-circle text-primary me-2"></i> Aumento de 25% na eficiência operacional</li>
-                                <li><i class="fas fa-check-circle text-primary me-2"></i> Diminuição de 40% no tempo de inatividade</li>
-                                <li><i class="fas fa-check-circle text-primary me-2"></i> Economia de 20% no consumo energético</li>
-                                <li><i class="fas fa-check-circle text-primary me-2"></i> ROI médio em 12-18 meses</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <img class="img-fluid w-100" src="{% static 'img/iot_1.png' %}" alt="Indústria 4.0">
                 </div>
             </div>
         </div>
@@ -81,10 +67,7 @@
         <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-lg-6">
                 <div class="position-relative">
-                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Preditiva">
-                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
-                        <i class="fas fa-cogs fa-2x"></i>
-                    </div>
+                    <img class="img-fluid rounded" src="{% static 'img/iot_2.png' %}" alt="Monitorização Preditiva">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -116,10 +99,7 @@
         <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-6 order-lg-2">
                 <div class="position-relative">
-                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Ambiental">
-                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
-                        <i class="fas fa-temperature-high fa-2x"></i>
-                    </div>
+                    <img class="img-fluid rounded" src="{% static 'img/iot_3.png' %}" alt="Monitorização Ambiental">
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
@@ -151,10 +131,7 @@
         <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.5s">
             <div class="col-lg-6">
                 <div class="position-relative">
-                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização Energética">
-                    <div class="position-absolute top-0 start-0 rounded p-3 bg-primary text-white" style="transform: translate(-15px, -15px);">
-                        <i class="fas fa-bolt fa-2x"></i>
-                    </div>
+                    <img class="img-fluid rounded" src="{% static 'img/iot_4.png' %}" alt="Monitorização Energética">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -186,10 +163,7 @@
         <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.7s">
             <div class="col-lg-6 order-lg-2">
                 <div class="position-relative">
-                    <img class="img-fluid rounded" src="/api/placeholder/600/400" alt="Monitorização de Tanques">
-                    <div class="position-absolute top-0 end-0 rounded p-3 bg-primary text-white" style="transform: translate(15px, -15px);">
-                        <i class="fas fa-water fa-2x"></i>
-                    </div>
+                    <img class="img-fluid rounded" src="{% static 'img/iot_5.png' %}" alt="Monitorização de Tanques">
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">

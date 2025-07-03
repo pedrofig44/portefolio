@@ -2,12 +2,14 @@
 
 {% block content %}
 
+{% load static %}
+
 <!-- About Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid rounded" src="img/about.png" alt="Consultoria em IoT e Tecnologia">
+                <img class="img-fluid rounded" src="{% static 'img/about_us.png' %}" alt="Consultoria em IoT e Tecnologia">
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
@@ -71,76 +73,76 @@
 
 
 <!-- Features Start -->
-<div class="container-xxl py-5">
+<div class="container-fluid py-5 bg-light">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6">Porquê Escolher-nos</h1>
+            <h2 class="display-6">Porquê Escolher-nos</h2>
             <p class="text-primary fs-5 mb-5">Excelência em Soluções IoT e Tecnologia</p>
         </div>
         <div class="row g-5">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex align-items-start feature-item">
+                <div class="d-flex align-items-start feature-item bg-dark">
                     <div class="feature-icon flex-shrink-0">
-                        <i class="fas fa-robot fa-2x text-primary"></i>
+                        <i class="fas fa-microchip fa-2x text-primary"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-3">Automação Inteligente</h5>
-                        <span>Implementamos soluções de automação personalizadas que otimizam seus processos e aumentam a eficiência operacional.</span>
+                        <h5 class="mb-3">Software e Sensores Personalizados</h5>
+                        <span>Desenvolvemos soluções personalizadas de hardware e software que se adaptam às suas necessidades, garantindo máxima eficiência para o seu negócio.</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="d-flex align-items-start feature-item">
+                <div class="d-flex align-items-start feature-item bg-dark">
                     <div class="feature-icon flex-shrink-0">
-                        <i class="fas fa-network-wired fa-2x text-primary"></i>
+                        <i class="fas fa-chart-bar fa-2x text-primary"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-3">Conectividade LoRaWAN</h5>
-                        <span>Redes IoT de longo alcance e baixo consumo, ideais para projetos de monitorização em grande escala.</span>
+                        <h5 class="mb-3">Decisões Baseadas em Dados</h5>
+                        <span>Transformamos dados em insights acionáveis através de análise avançada, permitindo decisões estratégicas baseadas em informações concretas.</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="d-flex align-items-start feature-item">
+                <div class="d-flex align-items-start feature-item bg-dark">
                     <div class="feature-icon flex-shrink-0">
-                        <i class="fas fa-brain fa-2x text-primary"></i>
+                        <i class="fas fa-bell fa-2x text-primary"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-3">Machine Learning</h5>
-                        <span>Análise preditiva e insights acionáveis através de algoritmos avançados de aprendizagem automática.</span>
+                        <h5 class="mb-3">Sistema de Monitorização e Alertas</h5>
+                        <span>Monitorização 24 horas por dia com alertas personalizáveis para métricas críticas, garantindo respostas rápidas a qualquer anomalia.</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex align-items-start feature-item">
+                <div class="d-flex align-items-start feature-item bg-dark">
                     <div class="feature-icon flex-shrink-0">
-                        <i class="fas fa-chart-line fa-2x text-primary"></i>
+                        <i class="fas fa-brain fa-2x text-primary"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-3">Análise em Tempo Real</h5>
-                        <span>Monitorização contínua e visualização de dados em tempo real para tomada de decisões imediata.</span>
+                        <h5 class="mb-3">Otimização com IA</h5>
+                        <span>Inteligência Artificial que aprende continuamente com os seus dados, identificando padrões e otimizando a eficiência operacional.</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="d-flex align-items-start feature-item">
+                <div class="d-flex align-items-start feature-item bg-dark">
                     <div class="feature-icon flex-shrink-0">
-                        <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                        <i class="fas fa-robot fa-2x text-primary"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-3">Segurança Garantida</h5>
-                        <span>Protocolos de segurança avançados para proteger seus dados e sistemas contra ameaças cibernéticas.</span>
+                        <h5 class="mb-3">Automação de Processos</h5>
+                        <span>Automatizamos processos complexos e integramos com os seus sistemas existentes, criando fluxos de trabalho mais eficientes.</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="d-flex align-items-start feature-item">
+                <div class="d-flex align-items-start feature-item bg-dark">
                     <div class="feature-icon flex-shrink-0">
                         <i class="fas fa-headset fa-2x text-primary"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-3">Suporte 24/7</h5>
-                        <span>Assistência técnica especializada disponível 24 horas por dia, 7 dias por semana.</span>
+                        <h5 class="mb-3">Suporte Garantido</h5>
+                        <span>Suporte técnico especializado, com assistência rápida e manutenção preventiva para o seu sistema.</span>
                     </div>
                 </div>
             </div>
