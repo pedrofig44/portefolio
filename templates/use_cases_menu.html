@@ -1,0 +1,108 @@
+{% extends 'includes/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-primary py-5 mb-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="display-4 mb-4 animated slideInDown text-white">Casos de Uso</h1>
+                <p class="animated slideInDown mb-5 text-white">Descubra como as nossas soluções IoT e IA podem transformar diferentes sectores, desde a indústria até à agricultura.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Use Cases Menu Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h2 class="display-6 mb-3">Escolha o seu Sector</h2>
+            <p class="text-primary fs-5 mb-5">Selecione a área que melhor se adequa ao seu negócio para ver soluções específicas</p>
+        </div>
+        
+        <div class="row g-5 justify-content-center">
+            <!-- Industrial Card -->
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <a href="{% url 'iot_industrial' %}" class="text-decoration-none">
+                    <div class="use-case-card h-100 p-5 text-center bg-light rounded shadow-sm hover-card">
+                        <div class="mb-4">
+                            <i class="fas fa-industry fa-6x text-primary mb-3"></i>
+                        </div>
+                        <h3 class="mb-4 text-dark">Sector Industrial</h3>
+                        <p class="text-muted mb-4 fs-5">Soluções IoT para optimização de processos industriais, monitorização de equipamentos, gestão de energia e automação de fábricas.</p>
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Monitorização de Equipamentos</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Gestão de Energia</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Controlo de Qualidade</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Manutenção Preditiva</li>
+                        </ul>
+                        <div class="btn btn-primary py-3 px-5 mt-3">Ver Soluções Industriais</div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Agriculture Card -->
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a href="{% url 'iot_agriculture' %}" class="text-decoration-none">
+                    <div class="use-case-card h-100 p-5 text-center bg-light rounded shadow-sm hover-card">
+                        <div class="mb-4">
+                            <i class="fas fa-seedling fa-6x text-success mb-3"></i>
+                        </div>
+                        <h3 class="mb-4 text-dark">Sector Agrícola</h3>
+                        <p class="text-muted mb-4 fs-5">Tecnologia inteligente para agricultura de precisão, monitorização de culturas, gestão de recursos hídricos e optimização da produção.</p>
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Monitorização de Solo</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Gestão de Irrigação</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Controlo Climático</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Análise de Culturas</li>
+                        </ul>
+                        <div class="btn btn-success py-3 px-5 mt-3">Ver Soluções Agrícolas</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Additional Info Section -->
+        <div class="row mt-5">
+            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-primary rounded p-4">
+                    <h4 class="text-white mb-3">Não encontra o seu sector?</h4>
+                    <p class="text-white mb-4">As nossas soluções são personalizáveis para qualquer tipo de negócio. Entre em contacto connosco para uma consultoria gratuita.</p>
+                    <a href="{% url 'contact' %}" class="btn btn-light py-3 px-5">Contactar-nos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Use Cases Menu End -->
+
+<style>
+.hover-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+    border-color: #0d6efd;
+}
+
+.use-case-card {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.use-case-card .btn {
+    margin-top: auto;
+}
+</style>
+
+{% endblock %}

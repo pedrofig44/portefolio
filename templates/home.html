@@ -13,7 +13,7 @@
                 <p class="animated slideInDown mb-5 text-white">Especialistas em Sensores e Inteligência Artificial, oferecendo soluções tecnológicas inovadoras para a sua empresa. Através de sensores avançados, automação inteligente e análise de dados em tempo real, transformamos o seu negócio para tomar decisões mais eficientes e gerir melhor os seus recursos.</p>
                 <div class="d-flex gap-4 justify-content-center animated slideInDown">
                     <a href="{% url 'contact' %}" class="btn btn-primary py-3 px-5">Solicitar Consultoria</a>
-                    <a href="#casos-uso" class="btn btn-outline-light py-3 px-5">Ver Casos de Uso</a>
+                    <a href="{% url 'use_cases_menu' %}" class="btn btn-outline-light py-3 px-5">Ver Casos de Uso</a>
                 </div>
             </div>
         </div>
@@ -37,8 +37,7 @@
                         </div>
                         <h5 class="mb-0">Implementação de Sensores</h5>
                     </div>
-                    <p class="mb-4">Instalação e configuração de redes de sensores inteligentes para monitorização em tempo real de diversos parâmetros críticos para o seu negócio.</p>
-                    <a class="btn btn-outline-primary px-3" href="">Saber Mais</a>
+                    <p class="mb-0">Instalação e configuração de redes de sensores inteligentes para monitorização em tempo real de diversos parâmetros críticos para o seu negócio.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -49,8 +48,7 @@
                         </div>
                         <h5 class="mb-0">Inteligência Artificial</h5>
                     </div>
-                    <p class="mb-4">Soluções de IA adaptadas às necessidades da sua empresa, desde análise preditiva até sistemas avançados de apoio à decisão.</p>
-                    <a class="btn btn-outline-primary px-3" href="">Saber Mais</a>
+                    <p class="mb-0">Soluções de IA adaptadas às necessidades da sua empresa, desde análise preditiva até sistemas avançados de apoio à decisão.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -61,8 +59,7 @@
                         </div>
                         <h5 class="mb-0">Automação de Processos</h5>
                     </div>
-                    <p class="mb-4">Automatizamos processos empresariais com tecnologia de ponta, reduzindo custos e aumentando a eficiência operacional.</p>
-                    <a class="btn btn-outline-primary px-3" href="">Saber Mais</a>
+                    <p class="mb-0">Automatizamos processos empresariais com tecnologia de ponta, reduzindo custos e aumentando a eficiência operacional.</p>
                 </div>
             </div>
         </div>
@@ -102,7 +99,7 @@
                     </div>
 
                     <div class="d-flex gap-3">
-                        <a class="btn btn-primary py-3 px-4" href="{% url 'about' %}">Saiba Mais</a>
+                        <a class="btn btn-primary py-3 px-4" href="{% url 'faq' %}">Saiba Mais</a>
                         <a class="btn btn-outline-primary py-3 px-4" href="{% url 'contact' %}">Fale Connosco</a>
                     </div>
                 </div>
@@ -114,7 +111,7 @@
 
 
 <!-- Contact Form Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="contact-form-section">
     <div class="container">
         <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-lg-6">
@@ -127,7 +124,7 @@
                     </div>
                     <div class="ms-3">
                         <h5 class="mb-1">Telefone</h5>
-                        <p class="mb-0">+351 912 345 678</p>
+                        <p class="mb-0">+351 968 614 711</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-center mb-4">
@@ -136,7 +133,7 @@
                     </div>
                     <div class="ms-3">
                         <h5 class="mb-1">Email</h5>
-                        <p class="mb-0">info@figueiredoit.pt</p>
+                        <p class="mb-0">figueiredoit@gmail.com</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
@@ -145,7 +142,7 @@
                     </div>
                     <div class="ms-3">
                         <h5 class="mb-1">Morada</h5>
-                        <p class="mb-0">Av. da Liberdade 110, Lisboa</p>
+                        <p class="mb-0">Lufapo Hub 2º Andar, R. Cel. Júlio Veiga Simão, 3025-307 Coimbra</p>
                     </div>
                 </div>
             </div>
@@ -308,7 +305,7 @@
                         <i class="fas fa-phone-alt fa-2x text-white me-3"></i>
                         <div>
                             <h5 class="text-white mb-0">Fale connosco agora</h5>
-                            <p class="text-white mb-0">+351 912 345 678</p>
+                            <p class="text-white mb-0">+351 968 614 711</p>
                         </div>
                     </div>
                 </div>
@@ -348,6 +345,16 @@
                 }
             }
         });
+
+        // Auto-scroll to contact form if there are messages (after form submission)
+        {% if messages %}
+            setTimeout(function() {
+                document.getElementById('contact-form-section').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        {% endif %}
     });
 </script>
 

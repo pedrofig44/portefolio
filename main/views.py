@@ -84,3 +84,15 @@ def iot_smart_cities(request):
 def automation(request):
     return render(request, 'use_case/automation.html')
 
+def use_cases_menu(request):
+    return render(request, 'use_cases_menu.html')
+
+def privacy_policy(request):
+    return render(request, 'privacy_policy.html')
+
+def terms_of_service(request):
+    return render(request, 'terms_of_service.html')
+
+def cookie_policy(request):
+    return render(request, 'cookie_policy.html')
+

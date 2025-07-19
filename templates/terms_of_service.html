@@ -1,0 +1,336 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-light py-5 mb-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="display-4 mb-3 animated slideInDown">Termos e Condições de Uso</h1>
+                <p class="animated slideInDown mb-4">Estes termos e condições regulam a utilização dos nossos serviços e website, estabelecendo os direitos e obrigações entre a FigueiredoIT e os utilizadores.</p>
+                <p class="text-muted"><small>Última atualização: {{ "now"|date:"d de F de Y" }}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Terms Content Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <!-- Table of Contents -->
+                <div class="bg-light rounded p-4 mb-5">
+                    <h3 class="mb-3">Índice</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#section1" class="text-decoration-none">1. Definições e Identificação</a></li>
+                        <li><a href="#section2" class="text-decoration-none">2. Objeto e Âmbito</a></li>
+                        <li><a href="#section3" class="text-decoration-none">3. Aceitação dos Termos</a></li>
+                        <li><a href="#section4" class="text-decoration-none">4. Serviços Oferecidos</a></li>
+                        <li><a href="#section5" class="text-decoration-none">5. Obrigações do Cliente</a></li>
+                        <li><a href="#section6" class="text-decoration-none">6. Obrigações da FigueiredoIT</a></li>
+                        <li><a href="#section7" class="text-decoration-none">7. Propriedade Intelectual</a></li>
+                        <li><a href="#section8" class="text-decoration-none">8. Proteção de Dados</a></li>
+                        <li><a href="#section9" class="text-decoration-none">9. Preços e Condições de Pagamento</a></li>
+                        <li><a href="#section10" class="text-decoration-none">10. Responsabilidade e Garantias</a></li>
+                        <li><a href="#section11" class="text-decoration-none">11. Rescisão do Contrato</a></li>
+                        <li><a href="#section12" class="text-decoration-none">12. Disposições Gerais</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section 1 -->
+                <section id="section1" class="mb-5">
+                    <h2 class="mb-3">1. Definições e Identificação</h2>
+                    
+                    <h4>1.1 Identificação da Empresa</h4>
+                    <ul>
+                        <li><strong>Denominação:</strong> FigueiredoIT</li>
+                        <li><strong>Morada:</strong> Lufapo Hub 2º Andar, R. Cel. Júlio Veiga Simão, 3025-307 Coimbra</li>
+                        <li><strong>Email:</strong> figueiredoit@gmail.com</li>
+                        <li><strong>Telefone:</strong> +351 968 614 711</li>
+                    </ul>
+
+                    <h4>1.2 Definições</h4>
+                    <ul>
+                        <li><strong>"Serviços":</strong> Todos os serviços de consultoria em IoT, Inteligência Artificial e tecnologia oferecidos pela FigueiredoIT</li>
+                        <li><strong>"Cliente":</strong> Pessoa singular ou coletiva que contrata os nossos serviços</li>
+                        <li><strong>"Website":</strong> O website da FigueiredoIT e todas as suas páginas</li>
+                        <li><strong>"Utilizador":</strong> Qualquer pessoa que acede ao nosso website</li>
+                    </ul>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="section2" class="mb-5">
+                    <h2 class="mb-3">2. Objeto e Âmbito</h2>
+                    <p>Estes termos e condições regulam:</p>
+                    <ul>
+                        <li>A utilização do website da FigueiredoIT</li>
+                        <li>A prestação de serviços de consultoria em tecnologia</li>
+                        <li>Os direitos e obrigações das partes</li>
+                        <li>As condições comerciais aplicáveis</li>
+                    </ul>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="section3" class="mb-5">
+                    <h2 class="mb-3">3. Aceitação dos Termos</h2>
+                    <div class="alert alert-info">
+                        <p><strong>Ao utilizar o nosso website ou contratar os nossos serviços, declara ter lido, compreendido e aceito integralmente estes termos e condições.</strong></p>
+                    </div>
+                    <p>A aceitação pode ocorrer:</p>
+                    <ul>
+                        <li>Através da marcação da checkbox de aceitação no website</li>
+                        <li>Pela assinatura de contrato específico</li>
+                        <li>Pelo início da utilização dos serviços</li>
+                    </ul>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="section4" class="mb-5">
+                    <h2 class="mb-3">4. Serviços Oferecidos</h2>
+                    
+                    <h4>4.1 Consultoria em IoT</h4>
+                    <ul>
+                        <li>Implementação de redes de sensores</li>
+                        <li>Desenvolvimento de soluções IoT personalizadas</li>
+                        <li>Integração com sistemas existentes</li>
+                        <li>Monitorização e manutenção</li>
+                    </ul>
+
+                    <h4>4.2 Inteligência Artificial</h4>
+                    <ul>
+                        <li>Desenvolvimento de algoritmos de machine learning</li>
+                        <li>Análise preditiva de dados</li>
+                        <li>Sistemas de apoio à decisão</li>
+                        <li>Automação de processos</li>
+                    </ul>
+
+                    <h4>4.3 Suporte Técnico</h4>
+                    <ul>
+                        <li>Assistência técnica especializada</li>
+                        <li>Formação de utilizadores</li>
+                        <li>Manutenção preventiva e corretiva</li>
+                        <li>Atualizações de software</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="section5" class="mb-5">
+                    <h2 class="mb-3">5. Obrigações do Cliente</h2>
+                    
+                    <h4>5.1 Informações e Cooperação</h4>
+                    <ul>
+                        <li>Fornecer informações corretas e completas</li>
+                        <li>Colaborar ativamente no desenvolvimento do projeto</li>
+                        <li>Disponibilizar acesso às instalações quando necessário</li>
+                        <li>Designar um responsável técnico para acompanhamento</li>
+                    </ul>
+
+                    <h4>5.2 Pagamentos</h4>
+                    <ul>
+                        <li>Efetuar os pagamentos nos prazos acordados</li>
+                        <li>Comunicar eventuais problemas de faturação</li>
+                        <li>Suportar custos adicionais resultantes de alterações ao projeto</li>
+                    </ul>
+
+                    <h4>5.3 Utilização Adequada</h4>
+                    <ul>
+                        <li>Utilizar os serviços apenas para fins legítimos</li>
+                        <li>Não interferir com o funcionamento dos sistemas</li>
+                        <li>Respeitar os direitos de propriedade intelectual</li>
+                        <li>Manter a confidencialidade das informações técnicas</li>
+                    </ul>
+                </section>
+
+                <!-- Section 6 -->
+                <section id="section6" class="mb-5">
+                    <h2 class="mb-3">6. Obrigações da FigueiredoIT</h2>
+                    
+                    <h4>6.1 Prestação de Serviços</h4>
+                    <ul>
+                        <li>Executar os serviços com profissionalismo e competência técnica</li>
+                        <li>Cumprir os prazos acordados</li>
+                        <li>Fornecer suporte técnico adequado</li>
+                        <li>Manter a confidencialidade das informações do cliente</li>
+                    </ul>
+
+                    <h4>6.2 Comunicação</h4>
+                    <ul>
+                        <li>Manter o cliente informado sobre o progresso dos projetos</li>
+                        <li>Comunicar eventuais atrasos ou dificuldades</li>
+                        <li>Responder a pedidos de esclarecimento em tempo útil</li>
+                    </ul>
+                </section>
+
+                <!-- Section 7 -->
+                <section id="section7" class="mb-5">
+                    <h2 class="mb-3">7. Propriedade Intelectual</h2>
+                    
+                    <h4>7.1 Direitos da FigueiredoIT</h4>
+                    <p>São propriedade da FigueiredoIT:</p>
+                    <ul>
+                        <li>Metodologias e know-how desenvolvidos</li>
+                        <li>Software genérico e ferramentas próprias</li>
+                        <li>Conteúdos do website e materiais de marketing</li>
+                        <li>Algoritmos e soluções técnicas genéricas</li>
+                    </ul>
+
+                    <h4>7.2 Direitos do Cliente</h4>
+                    <p>São propriedade do cliente:</p>
+                    <ul>
+                        <li>Dados e informações fornecidas</li>
+                        <li>Soluções específicas desenvolvidas exclusivamente para o cliente</li>
+                        <li>Customizações específicas do projeto</li>
+                    </ul>
+
+                    <h4>7.3 Licenças</h4>
+                    <p>A FigueiredoIT concede ao cliente licença não exclusiva para utilização das soluções desenvolvidas, nos termos definidos em contrato específico.</p>
+                </section>
+
+                <!-- Section 8 -->
+                <section id="section8" class="mb-5">
+                    <h2 class="mb-3">8. Proteção de Dados</h2>
+                    <p>O tratamento de dados pessoais rege-se pela nossa <a href="{% url 'privacy_policy' %}" class="text-decoration-none">Política de Privacidade</a> e pelo RGPD.</p>
+                    
+                    <h4>8.1 Compromissos</h4>
+                    <ul>
+                        <li>Tratamento lícito, leal e transparente dos dados</li>
+                        <li>Implementação de medidas de segurança adequadas</li>
+                        <li>Respeito pelos direitos dos titulares dos dados</li>
+                        <li>Confidencialidade e não divulgação a terceiros</li>
+                    </ul>
+                </section>
+
+                <!-- Section 9 -->
+                <section id="section9" class="mb-5">
+                    <h2 class="mb-3">9. Preços e Condições de Pagamento</h2>
+                    
+                    <h4>9.1 Preços</h4>
+                    <ul>
+                        <li>Os preços são definidos em proposta específica para cada projeto</li>
+                        <li>Incluem IVA à taxa legal em vigor</li>
+                        <li>Podem sofrer alterações mediante acordo entre as partes</li>
+                    </ul>
+
+                    <h4>9.2 Condições de Pagamento</h4>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="bg-light rounded p-3">
+                                <h5>Projetos de Desenvolvimento</h5>
+                                <ul class="mb-0">
+                                    <li>30% no início do projeto</li>
+                                    <li>40% na entrega de milestone</li>
+                                    <li>30% na entrega final</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-light rounded p-3">
+                                <h5>Serviços de Consultoria</h5>
+                                <ul class="mb-0">
+                                    <li>Faturação mensal</li>
+                                    <li>Pagamento a 30 dias</li>
+                                    <li>Baseado em horas efetivas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>9.3 Incumprimento</h4>
+                    <p>O incumprimento dos prazos de pagamento pode resultar em:</p>
+                    <ul>
+                        <li>Juros de mora à taxa legal</li>
+                        <li>Suspensão dos serviços</li>
+                        <li>Rescisão do contrato</li>
+                    </ul>
+                </section>
+
+                <!-- Section 10 -->
+                <section id="section10" class="mb-5">
+                    <h2 class="mb-3">10. Responsabilidade e Garantias</h2>
+                    
+                    <h4>10.1 Garantias</h4>
+                    <ul>
+                        <li><strong>Software:</strong> 12 meses contra defeitos de programação</li>
+                        <li><strong>Hardware:</strong> Conforme garantia do fabricante</li>
+                        <li><strong>Serviços:</strong> Correção gratuita de erros durante 90 dias</li>
+                    </ul>
+
+                    <h4>10.2 Limitações de Responsabilidade</h4>
+                    <div class="alert alert-warning">
+                        <p><strong>A responsabilidade da FigueiredoIT está limitada ao valor do contrato.</strong></p>
+                    </div>
+                    <p>Estão excluídos da responsabilidade:</p>
+                    <ul>
+                        <li>Danos indiretos ou consequenciais</li>
+                        <li>Lucros cessantes</li>
+                        <li>Problemas resultantes de uso inadequado</li>
+                        <li>Força maior ou caso fortuito</li>
+                    </ul>
+                </section>
+
+                <!-- Section 11 -->
+                <section id="section11" class="mb-5">
+                    <h2 class="mb-3">11. Rescisão do Contrato</h2>
+                    
+                    <h4>11.1 Rescisão por Acordo</h4>
+                    <p>O contrato pode ser rescindido por mútuo acordo entre as partes.</p>
+
+                    <h4>11.2 Rescisão por Incumprimento</h4>
+                    <p>Qualquer das partes pode rescindir o contrato em caso de:</p>
+                    <ul>
+                        <li>Incumprimento grave das obrigações contratuais</li>
+                        <li>Insolvência ou falência da outra parte</li>
+                        <li>Impossibilidade superveniente de cumprir o contrato</li>
+                    </ul>
+
+                    <h4>11.3 Efeitos da Rescisão</h4>
+                    <ul>
+                        <li>Cessação imediata da prestação de serviços</li>
+                        <li>Entrega dos trabalhos desenvolvidos até à data</li>
+                        <li>Liquidação das obrigações pendentes</li>
+                        <li>Devolução de informações confidenciais</li>
+                    </ul>
+                </section>
+
+                <!-- Section 12 -->
+                <section id="section12" class="mb-5">
+                    <h2 class="mb-3">12. Disposições Gerais</h2>
+                    
+                    <h4>12.1 Lei Aplicável</h4>
+                    <p>Estes termos regem-se pela lei portuguesa.</p>
+
+                    <h4>12.2 Foro Competente</h4>
+                    <p>Para a resolução de eventuais litígios, é competente o Tribunal de Coimbra.</p>
+
+                    <h4>12.3 Alterações</h4>
+                    <p>Alterações a estes termos devem ser acordadas por escrito entre as partes.</p>
+
+                    <h4>12.4 Nulidade Parcial</h4>
+                    <p>A nulidade de qualquer cláusula não afeta a validade das restantes disposições.</p>
+
+                    <h4>12.5 Contactos</h4>
+                    <div class="bg-light rounded p-3">
+                        <p class="mb-1"><strong>Para questões sobre estes termos:</strong></p>
+                        <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i>figueiredoit@gmail.com</p>
+                        <p class="mb-0"><i class="fas fa-phone text-primary me-2"></i>+351 968 614 711</p>
+                    </div>
+                </section>
+
+                <!-- Updates Notice -->
+                <div class="alert alert-info">
+                    <h5><i class="fas fa-info-circle me-2"></i>Atualizações</h5>
+                    <p class="mb-0">Estes termos podem ser atualizados periodicamente. As alterações entram em vigor na data da sua publicação no website.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Terms Content End -->
+
+{% endblock %}

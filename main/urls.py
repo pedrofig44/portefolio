@@ -14,8 +14,14 @@ urlpatterns = [
     path('budget-request/success/', views.budget_request_success, name='budget_request_success'),
     
     # Casos de Uso
+    path('use-cases/', views.use_cases_menu, name='use_cases_menu'),
     path('iot_industrial/', views.iot_industrial, name='iot_industrial'),
     path('iot_agriculture/', views.iot_agriculture, name='iot_agriculture'),
     path('iot_smart_cities/', views.iot_smart_cities, name='iot_smart_cities'),
     path('automation/', views.automation, name='automation'),
+    
+    # Legal Pages
+    path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
+    path('terms-of-service/', views.terms_of_service, name='terms_of_service'),
+    path('cookie-policy/', views.cookie_policy, name='cookie_policy'),
 ]

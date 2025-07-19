@@ -111,9 +111,9 @@
                 
                 <div class="col-md-6 col-lg-3">
                     <h5 class="mb-4">Contacte-nos</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Av. da Liberdade 110, Lisboa</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+351 912 345 678</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@figueiredoit.pt</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Lufapo Hub 2º Andar, R. Cel. Júlio Veiga Simão, 3025-307 Coimbra</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+351 968 614 711</p>
+                    <p><i class="fa fa-envelope me-3"></i>figueiredoit@gmail.com</p>
                     <div class="mt-4">
                         <a href="{% url 'contact' %}" class="btn btn-outline-primary btn-sm">Fale Connosco</a>
                     </div>
@@ -135,7 +135,9 @@
                     <a class="btn btn-link" href="{% url 'meeting_request' %}">Agendar Reunião</a>
                     <a class="btn btn-link" href="{% url 'budget_request' %}">Solicitar Orçamento</a>
                     <a class="btn btn-link" href="{% url 'faq' %}">FAQ</a>
-                    <a class="btn btn-link" href="#">Termos e Condições</a>
+                    <a class="btn btn-link" href="{% url 'privacy_policy' %}">Política de Privacidade</a>
+                    <a class="btn btn-link" href="{% url 'terms_of_service' %}">Termos e Condições</a>
+                    <a class="btn btn-link" href="{% url 'cookie_policy' %}">Política de Cookies</a>
                 </div>
             </div>
         </div>
@@ -159,6 +161,118 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent-banner" style="display: none;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="d-flex align-items-start">
+                        <i class="fas fa-cookie-bite fa-2x text-primary me-3 mt-1"></i>
+                        <div>
+                            <h5 class="mb-2">Este website utiliza cookies</h5>
+                            <p class="mb-2">Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e personalizar conteúdo. Alguns cookies são essenciais para o funcionamento do website.</p>
+                            <p class="mb-0 small">
+                                <a href="/privacy-policy/" class="text-decoration-none me-3">Política de Privacidade</a>
+                                <a href="/cookie-policy/" class="text-decoration-none">Política de Cookies</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column flex-lg-row gap-2">
+                        <button class="btn btn-outline-secondary btn-sm" id="cookieReject">
+                            <i class="fas fa-times me-1"></i>Rejeitar
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm" id="cookieCustomize">
+                            <i class="fas fa-cog me-1"></i>Personalizar
+                        </button>
+                        <button class="btn btn-primary btn-sm" id="cookieAccept">
+                            <i class="fas fa-check me-1"></i>Aceitar Todos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="cookie-close-btn" id="cookieClose" aria-label="Fechar">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div class="modal fade" id="cookieSettingsModal" tabindex="-1" aria-labelledby="cookieSettingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cookieSettingsModalLabel">
+                        <i class="fas fa-cog me-2"></i>Preferências de Cookies
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Escolha quais cookies pretende aceitar. Os cookies essenciais são sempre necessários para o funcionamento do website.</p>
+                    
+                    <div class="cookie-category mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1">Cookies Essenciais</h6>
+                                <small class="text-muted">Necessários para o funcionamento básico</small>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="essentialCookies" checked disabled>
+                                <label class="form-check-label" for="essentialCookies">Sempre Ativo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cookie-category mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1">Cookies de Análise</h6>
+                                <small class="text-muted">Ajudam-nos a melhorar o website</small>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="analyticsCookies">
+                                <label class="form-check-label" for="analyticsCookies"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cookie-category mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1">Cookies de Marketing</h6>
+                                <small class="text-muted">Personalização de conteúdo e anúncios</small>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="marketingCookies">
+                                <label class="form-check-label" for="marketingCookies"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cookie-category mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1">Cookies Funcionais</h6>
+                                <small class="text-muted">Melhoram a funcionalidade do website</small>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="functionalCookies">
+                                <label class="form-check-label" for="functionalCookies"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-outline-primary" id="rejectAll">Rejeitar Todos</button>
+                    <button type="button" class="btn btn-primary" id="savePreferences">Guardar Preferências</button>
+                    <button type="button" class="btn btn-success" id="acceptAll">Aceitar Todos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -173,6 +287,207 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- Cookie Management Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if user has already made a choice
+        if (!getCookie('cookie_consent')) {
+            // Show cookie banner after 1 second
+            setTimeout(() => {
+                document.getElementById('cookieConsent').style.display = 'block';
+            }, 1000);
+        }
+
+        // Cookie banner buttons
+        document.getElementById('cookieAccept').addEventListener('click', function() {
+            acceptAllCookies();
+        });
+
+        document.getElementById('cookieReject').addEventListener('click', function() {
+            rejectAllCookies();
+        });
+
+        document.getElementById('cookieCustomize').addEventListener('click', function() {
+            openCookieSettings();
+        });
+
+        document.getElementById('cookieClose').addEventListener('click', function() {
+            rejectAllCookies();
+        });
+
+        // Modal buttons
+        document.getElementById('savePreferences').addEventListener('click', function() {
+            saveCookiePreferences();
+        });
+
+        document.getElementById('acceptAll').addEventListener('click', function() {
+            document.getElementById('analyticsCookies').checked = true;
+            document.getElementById('marketingCookies').checked = true;
+            document.getElementById('functionalCookies').checked = true;
+            saveCookiePreferences();
+        });
+
+        document.getElementById('rejectAll').addEventListener('click', function() {
+            document.getElementById('analyticsCookies').checked = false;
+            document.getElementById('marketingCookies').checked = false;
+            document.getElementById('functionalCookies').checked = false;
+            saveCookiePreferences();
+        });
+
+        // Load current preferences when modal opens
+        document.getElementById('cookieSettingsModal').addEventListener('show.bs.modal', function() {
+            loadCookiePreferences();
+        });
+    });
+
+    function acceptAllCookies() {
+        const preferences = {
+            essential: true,
+            analytics: true,
+            marketing: true,
+            functional: true
+        };
+        
+        setCookie('cookie_consent', JSON.stringify(preferences), 365);
+        hideCookieBanner();
+        loadAnalytics();
+        showToast('Todas as preferências de cookies foram aceitas!', 'success');
+    }
+
+    function rejectAllCookies() {
+        const preferences = {
+            essential: true,
+            analytics: false,
+            marketing: false,
+            functional: false
+        };
+        
+        setCookie('cookie_consent', JSON.stringify(preferences), 365);
+        hideCookieBanner();
+        showToast('Apenas cookies essenciais foram aceites!', 'info');
+    }
+
+    function openCookieSettings() {
+        loadCookiePreferences();
+        var modal = new bootstrap.Modal(document.getElementById('cookieSettingsModal'));
+        modal.show();
+    }
+
+    function loadCookiePreferences() {
+        const preferences = getCookiePreferences();
+        if (document.getElementById('analyticsCookies')) {
+            document.getElementById('analyticsCookies').checked = preferences.analytics;
+            document.getElementById('marketingCookies').checked = preferences.marketing;
+            document.getElementById('functionalCookies').checked = preferences.functional;
+        }
+    }
+
+    function saveCookiePreferences() {
+        const preferences = {
+            essential: true,
+            analytics: document.getElementById('analyticsCookies').checked,
+            marketing: document.getElementById('marketingCookies').checked,
+            functional: document.getElementById('functionalCookies').checked
+        };
+        
+        setCookie('cookie_consent', JSON.stringify(preferences), 365);
+        hideCookieBanner();
+        
+        // Close modal
+        var modal = bootstrap.Modal.getInstance(document.getElementById('cookieSettingsModal'));
+        if (modal) modal.hide();
+        
+        // Load analytics if accepted
+        if (preferences.analytics) {
+            loadAnalytics();
+        }
+        
+        showToast('Preferências de cookies guardadas com sucesso!', 'success');
+    }
+
+    function getCookiePreferences() {
+        const consent = getCookie('cookie_consent');
+        if (consent) {
+            return JSON.parse(consent);
+        }
+        return {
+            essential: true,
+            analytics: false,
+            marketing: false,
+            functional: false
+        };
+    }
+
+    function hideCookieBanner() {
+        const banner = document.getElementById('cookieConsent');
+        banner.style.animation = 'slideInUp 0.5s ease-out reverse';
+        setTimeout(() => {
+            banner.style.display = 'none';
+        }, 500);
+    }
+
+    function loadAnalytics() {
+        const preferences = getCookiePreferences();
+        if (preferences.analytics) {
+            // Load Google Analytics only if analytics cookies are accepted
+            // Replace GA_MEASUREMENT_ID with your actual Google Analytics ID
+            /*
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID');
+            */
+            console.log('Analytics cookies accepted - Analytics would be loaded here');
+        }
+    }
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+    }
+
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function showToast(message, type) {
+        // Create toast element
+        const toast = document.createElement('div');
+        toast.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+        toast.style.cssText = 'top: 20px; right: 20px; z-index: 10000; min-width: 300px;';
+        toast.innerHTML = `
+            <strong>${message}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        
+        document.body.appendChild(toast);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (toast && toast.parentNode) {
+                toast.parentNode.removeChild(toast);
+            }
+        }, 5000);
+    }
+
+    // Initialize analytics if already consented
+    document.addEventListener('DOMContentLoaded', function() {
+        const preferences = getCookiePreferences();
+        if (preferences.analytics) {
+            loadAnalytics();
+        }
+    });
+    </script>
 
 </body>
 

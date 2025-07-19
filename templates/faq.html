@@ -12,7 +12,7 @@
                 <p class="animated slideInDown mb-4">Aqui encontrará respostas para as perguntas mais comuns sobre os nossos serviços, tecnologias e metodologias. Se não encontrar a resposta que procura, não hesite em contactar-nos.</p>
             </div>
             <div class="col-lg-6 animated fadeIn">
-                <img class="img-fluid animated pulse" style="animation-duration: 3s;" src="{% static 'img/faq_image.png' %}" alt="Perguntas Frequentes">
+                <img class="img-fluid animated pulse" style="animation-duration: 3s; max-width: 50%; height: auto; margin: 0 auto; display: block;" src="{% static 'img/faq_image.png' %}" alt="Perguntas Frequentes">
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h2 class="display-6 mb-5">Informações Úteis sobre os Nossos Serviços</h2>
+            <h2 class="display-6 mb-5 text-white">Informações Úteis sobre os Nossos Serviços</h2>
         </div>
         
         <!-- Main FAQs Section -->
@@ -119,7 +119,7 @@
                                         Como funcionam os sensores IoT na monitorização ambiental?
                                     </button>
                                 </h2>
-                                <div id="collapseIoT1" class="accordion-collapse collapse show" aria-labelledby="headingIoT1"
+                                <div id="collapseIoT1" class="accordion-collapse collapse" aria-labelledby="headingIoT1"
                                     data-bs-parent="#accordionIoT">
                                     <div class="accordion-body">
                                         Os nossos sensores IoT funcionam através de uma rede integrada que recolhe dados em tempo real. Cada sensor é especializado numa medição específica (temperatura, humidade, qualidade do ar, etc.) e transmite os dados para uma plataforma central. Esta informação pode ser acedida através de qualquer dispositivo com ligação à Internet, permitindo uma monitorização constante e alertas em tempo real.
@@ -181,7 +181,7 @@
                                         Que tipos de soluções de IA vocês oferecem?
                                     </button>
                                 </h2>
-                                <div id="collapseAI1" class="accordion-collapse collapse show" aria-labelledby="headingAI1"
+                                <div id="collapseAI1" class="accordion-collapse collapse" aria-labelledby="headingAI1"
                                     data-bs-parent="#accordionAI">
                                     <div class="accordion-body">
                                         Oferecemos uma variedade de soluções de IA, incluindo análise preditiva para manutenção e otimização de recursos, sistemas de visão computacional para controle de qualidade e segurança, algoritmos de machine learning para análise de dados e identificação de padrões, e sistemas de apoio à decisão baseados em IA para gestão operacional. Cada solução é personalizada de acordo com as necessidades específicas do cliente.
@@ -308,12 +308,9 @@
             <div class="col-lg-8 text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h2 class="mb-4">Não encontrou a resposta que procurava?</h2>
                 <p class="fs-5 mb-4">A nossa equipa está disponível para esclarecer todas as suas dúvidas e fornecer informações adicionais sobre os nossos serviços.</p>
-                <div class="d-flex justify-content-center gap-3">
+                <div class="d-flex justify-content-center">
                     <a href="{% url 'contact' %}" class="btn btn-primary py-3 px-5">
                         <i class="fas fa-envelope me-2"></i>Contacte-nos
-                    </a>
-                    <a href="{% url 'meeting_request' %}" class="btn btn-outline-primary py-3 px-5">
-                        <i class="fas fa-calendar-alt me-2"></i>Agendar Reunião
                     </a>
                 </div>
             </div>
@@ -321,5 +318,126 @@
     </div>
 </div>
 <!-- Contact Card End -->
+
+<style>
+/* FAQ Section Improvements */
+.accordion-item {
+    border: 1px solid #e9ecef;
+    margin-bottom: 1rem;
+    border-radius: 10px !important;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 1.5rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border-radius: 10px 10px 0 0 !important;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #09809b;
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(9, 128, 155, 0.25);
+    border-color: transparent;
+}
+
+.accordion-button::after {
+    background-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    background-color: #343a40;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #f8f9fa;
+    border-top: 3px solid #09809b;
+    margin: 0;
+}
+
+.accordion-collapse {
+    border-radius: 0 0 10px 10px;
+}
+
+/* Tab Navigation Improvements */
+.nav-pills .nav-link {
+    border-radius: 25px;
+    padding: 12px 24px;
+    margin: 0 8px;
+    font-weight: 500;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #e9ecef;
+    color: #09809b;
+    border-color: #09809b;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #09809b;
+    border-color: #09809b;
+    color: white;
+    box-shadow: 0 4px 8px rgba(9, 128, 155, 0.3);
+}
+
+/* Container spacing improvements */
+.tab-content {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.accordion {
+    --bs-accordion-border-width: 0;
+}
+
+/* FAQ Section Title */
+.display-6 {
+    color: #333;
+    font-weight: 700;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .accordion-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .accordion-body {
+        padding: 1.5rem 2rem 2rem 2rem;
+    }
+    
+    .nav-pills .nav-link {
+        margin: 4px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+</style>
 
 {% endblock %}
